@@ -63,8 +63,8 @@
   </dialog>
 
   <dialog class="suggest-dialog" id="suggest-dialog">
-    <form method="dialog" class="suggest-card" id="suggest-form">
-      <button class="dialog-close" value="cancel" aria-label="Schließen">×</button>
+    <form class="suggest-card" id="suggest-form" novalidate>
+      <button class="dialog-close" type="button" data-close-suggest aria-label="Schließen">×</button>
       <p class="eyebrow">Neue Entdeckung</p>
       <h2>Finca vorschlagen</h2>
       <p>Du hast eine interessante Finca gefunden? Schick uns einfach den Link.</p>
@@ -76,6 +76,7 @@
         <button type="button" data-share="email">E-Mail</button>
         <button type="button" data-share="copy">Link kopieren</button>
       </div>
+      <button class="cancel-button" type="button" data-close-suggest>Abbrechen</button>
       <p class="privacy-note">Der Link wird nur über die von dir gewählte App geteilt und nicht auf dieser Website gespeichert.</p>
     </form>
   </dialog>

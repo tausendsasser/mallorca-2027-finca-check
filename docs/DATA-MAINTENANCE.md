@@ -25,6 +25,7 @@ Mindestens erforderlich sind:
 - `price`, `currency`, `nights`, `adults`, `children`
 - `availability.intervals`
 - `images` (darf leer sein; bevorzugt bis zu fünf öffentliche Vorschaubilder des Originalanbieters)
+- `quickRatings` (darf leer sein; spontane Gesamtscores 1–10 je Familienmitglied)
 - `familyRatings` (darf leer sein)
 
 Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten Angaben `null`, `"unknown"`, `[]` oder `{}` passend zum Feldtyp. Keine Felder entfernen, nur weil Daten fehlen.
@@ -56,6 +57,8 @@ Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten
   "bathrooms": null,
   "beds": null,
   "bedConfiguration": "unknown",
+  "sleepingCapacity": "Kapazität noch zu prüfen.",
+  "sleepingConsiderations": "Aufteilung noch zu prüfen.",
   "pool": {
     "length": null,
     "width": null,
@@ -88,6 +91,7 @@ Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten
   "personalPositives": [],
   "personalNegatives": [],
   "memoryAnchor": null,
+  "ourImpression": "Kurzer natürlicher Eindruck in zwei bis vier Sätzen.",
   "availability": {
     "summary": "Noch nicht geprüft",
     "intervals": [
@@ -97,6 +101,7 @@ Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten
   "images": [
     { "url": "https://anbieter.example/bild-1.jpg", "alt": "Pool und Terrasse" }
   ],
+  "quickRatings": {},
   "familyRatings": {}
 }
 ```
@@ -113,6 +118,22 @@ Jedes Intervall besitzt `start`, `end` und `state`. Erlaubte Zustände sind `ava
 ```
 
 ## Bewertungen ergänzen
+
+### Quick Score
+
+Der Quick Score ist die spontane persönliche Gesamteinschätzung und bleibt getrennt von der gewichteten Detailbewertung:
+
+```json
+"quickRatings": {
+  "Marcel": 8,
+  "Alina": 9,
+  "Opi": 7
+}
+```
+
+Erlaubt sind nur ganze Zahlen von 1 bis 10. Die App berechnet daraus den Familien-Durchschnitt. Direkt in der App gesetzte Quick Scores werden in Version 1 lokal im Browser gespeichert.
+
+### Gewichtete Detailbewertung
 
 Die Schlüssel unter `familyRatings` müssen aus `familyMembers` stammen. Werte liegen auf einer Skala von 1 bis 10. Einzelne noch fehlende Bewertungen dürfen `null` sein.
 
@@ -139,7 +160,7 @@ Die Schlüssel unter `familyRatings` müssen aus `familyMembers` stammen. Werte 
 
 Die App berechnet die gewichtete Wertung aus `ratingCriteria`. Liegt `sleeping` oder `privacy` unter 5, wird die Gesamtwertung gemäß `mustCriteriaScoreCap` gedeckelt.
 
-Bewertungen, die Besucher direkt in Version 1 der Website eingeben, werden im Browser des jeweiligen Geräts gespeichert (`localStorage`). Sie erscheinen deshalb nicht automatisch auf anderen Geräten und verändern `fincas.json` nicht. Für eine spätere geräteübergreifende Familienbewertung wird eine kleine zentrale Schreibschnittstelle oder ein Formular-/Sheet-Workflow benötigt.
+Bewertungen und persönliche Notizen, die Besucher direkt in Version 1 der Website eingeben, werden im Browser des jeweiligen Geräts gespeichert (`localStorage`). Sie erscheinen deshalb nicht automatisch auf anderen Geräten und verändern `fincas.json` nicht. Für eine spätere geräteübergreifende Familienbewertung wird eine kleine zentrale Schreibschnittstelle oder ein Formular-/Sheet-Workflow benötigt.
 
 ## Sicherer Update-Ablauf für einen KI-Agenten
 
