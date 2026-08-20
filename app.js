@@ -110,22 +110,42 @@ function filteredFincas() {
     if (state.sort === 'price') return (a.price ?? Infinity) - (b.price ?? Infinity);
     if (state.sort === 'pool') return (b.pool?.area ?? -1) - (a.pool?.area ?? -1);
     if (state.sort === 'name') return a.name.localeCompare(b.name, 'de');
-    return (ratingSummary(b).score ?? -1) - (ratingSummary(a).score ?? -1);
+    return (quickRatingSummary(b).average ?? -1) - (quickRatingSummary(a).average ?? -1);
   });
 }
 
+function ranking() {
+  return [...state.data.fincas].filter(f => f.status !== 'excluded').sort((a,b) => (quickRatingSummary(b).average ?? -1) - (quickRatingSummary(a).average ?? -1) || (a.price ?? Infinity) - (b.price ?? Infinity));
+}
+
+function rankOf(finca) { const score = quickRatingSummary(finca); return score.count ? ranking().findIndex(item => item.id === finca.id) + 1 : null; }
+
+function familyRatingLine(finca) {
+  const values = quickRatingsFor(finca);
+  return `<div class="family-rating-line">${state.data.familyMembers.map(person => `<span class="member-score ${values[person] ? 'has-score' : ''}"><b>${person}</b>${values[person] ?? '–'}</span>`).join('')}</div>`;
+}
+
+function criterionHint(label, status, detail) { return `<span class="criterion-hint ${status}"><b>${label}:</b> ${status === 'good' ? 'gut' : 'prüfen'}<small>${detail}</small></span>`; }
+function sleepingStatus(finca) { return /prüfen|ungünstig|offen|separat|noch nicht/i.test(finca.sleepingConsiderations || '') ? 'check' : 'good'; }
+function quietStatus(finca) { return /prüfen|hörbar|möglich|straße|ortsnah|nachbar/i.test(`${finca.privacy} ${finca.roadNoise}`) ? 'check' : 'good'; }
+
 function card(finca) {
-  const score = ratingSummary(finca);
-  return `<article class="finca-card" style="--card-art:${art(finca)}">
+  const family = quickRatingSummary(finca);
+  const rank = rankOf(finca);
+  return `<article class="finca-card ${rank === 1 ? 'is-winner' : ''}" style="--card-art:${art(finca)}">
     <div class="finca-image">
       ${galleryMedia(finca)}
+      ${rank ? `<span class="rank-badge">Platz ${rank}</span>` : ''}
+      <span class="photo-score ${family.average ? '' : 'empty'}">${family.average ? family.average.toFixed(1) : '–'}<small>Familie</small></span>
       <span class="finca-status ${finca.status}">${finca.status === 'excluded' ? 'Ausgeschieden' : finca.status === 'candidate' ? 'Kandidat' : 'In Auswahl'}</span>
       <button class="favorite ${state.favorites.has(finca.id) ? 'is-favorite' : ''}" data-favorite="${finca.id}" aria-label="Favorit">${state.favorites.has(finca.id) ? '♥' : '♡'}</button>
     </div>
     <div class="finca-body">
       <span class="finca-kicker">${text(finca.region)} · ${text(finca.location)}</span>
       <div class="finca-title-row"><h3>${finca.name}</h3><div class="price">${money(finca.price)}<small>${finca.nights || state.data.trip.nights} Nächte</small></div></div>
-      <div class="quick-facts"><span>⌂ ${text(finca.bedrooms)} Schlafzimmer</span><span>◉ ${text(finca.pool?.display, 'Pool offen')}</span><span>Gewichtet ${score.score ? score.score.toFixed(1) : '–'}</span></div>
+      <div class="quick-facts"><span>⌂ ${text(finca.bedrooms)} Schlafzimmer</span><span>◉ Pool ${text(finca.pool?.display, 'Maße offen')}</span></div>
+      <div class="criteria-strip">${criterionHint('Schlafen', sleepingStatus(finca), finca.sleepingConsiderations)}${criterionHint('Ruhe', quietStatus(finca), `${finca.privacy}; ${finca.roadNoise}`)}</div>
+      ${familyRatingLine(finca)}
       ${availabilityBar(finca)}
       ${quickScoreControl(finca, 'card')}
       <div class="card-actions"><button data-detail="${finca.id}">Details ansehen</button><a href="${finca.listingUrl}" target="_blank" rel="noopener">Inserat ↗</a></div>
@@ -134,19 +154,20 @@ function card(finca) {
 }
 
 function renderSpotlight(list) {
-  const finca = list.find(f => state.favorites.has(f.id)) || list[0];
-  $('#spotlight').innerHTML = finca ? `<article class="spotlight-card" style="--card-art:${art(finca)}" data-detail="${finca.id}">
-    <div><p class="eyebrow">${state.favorites.has(finca.id) ? 'Familienfavorit' : 'Unsere Auswahl'}</p><h3>${finca.name}</h3><div class="spotlight-meta"><span>${text(finca.location)}</span><span>•</span><span>${money(finca.price)}</span></div></div>
-    <span class="score-badge">${ratingSummary(finca).score?.toFixed(1) || 'Neu'}</span>
+  const ranked = ranking().filter(finca => list.some(item => item.id === finca.id));
+  const finca = ranked.find(f => quickRatingSummary(f).count) || list[0];
+  const family = finca ? quickRatingSummary(finca) : { average:null, count:0 };
+  const image = finca ? gallery(finca)[0] : null;
+  $('#spotlight').innerHTML = finca ? `<article class="spotlight-card ${family.count ? 'has-winner' : ''}" style="--card-art:${art(finca)}" data-detail="${finca.id}">
+    ${image ? `<img src="${image.url}" alt="${image.alt || finca.name}">` : ''}
+    <div><p class="eyebrow">${family.count ? 'Aktuell auf Platz 1' : 'Noch ohne Familienwertung'}</p><h3>${finca.name}</h3><div class="spotlight-meta"><span>${text(finca.location)}</span><span>•</span><span>${money(finca.price)}</span><span>•</span><span>${family.count} von 6 bewertet</span></div><a class="spotlight-link" href="${finca.listingUrl}" target="_blank" rel="noopener">Inserat öffnen ↗</a></div>
+    <span class="score-badge">${family.average?.toFixed(1) || '–'}<small>Familie</small></span>
   </article>` : '';
 }
 
 function renderComparison() {
-  const ranked = [...state.data.fincas].filter(f => f.status !== 'excluded').sort((a,b) => {
-    const favoriteDelta = Number(state.favorites.has(b.id)) - Number(state.favorites.has(a.id));
-    return favoriteDelta || (ratingSummary(b).score ?? -1) - (ratingSummary(a).score ?? -1) || (a.price ?? Infinity) - (b.price ?? Infinity);
-  }).slice(0,5);
-  $('#comparison-list').innerHTML = ranked.map((f,i) => `<article class="comparison-card" data-detail="${f.id}"><span class="rank">${i+1}</span><div><h3>${f.name}</h3><p>${text(f.region)} · ${money(f.price)} · Pool ${text(f.pool?.display)}</p></div><span class="comparison-score">${ratingSummary(f).score?.toFixed(1) || 'offen'}</span></article>`).join('');
+  const ranked = ranking().slice(0,5);
+  $('#comparison-list').innerHTML = ranked.map((f,i) => { const family=quickRatingSummary(f); return `<article class="comparison-card ${i===0&&family.count?'is-winner':''}" data-detail="${f.id}"><span class="rank">${i+1}</span><div><h3>${f.name}</h3><p>${text(f.region)} · ${money(f.price)} · Pool ${text(f.pool?.display)}</p>${familyRatingLine(f)}</div><span class="comparison-score">${family.average?.toFixed(1) || 'offen'}</span></article>`; }).join('');
 }
 
 function render() {
@@ -187,17 +208,16 @@ function depth(pool) { return unknown(pool.minDepth) && unknown(pool.maxDepth) ?
 
 function ratingPanel(finca) {
   const savedByPerson = { ...(finca.familyRatings || {}), ...(state.localRatings[finca.id] || {}) };
-  return `<section class="detail-section rating-section">
-    <p class="eyebrow">Familienwertung</p><h3>Wie fühlt sich diese Finca an?</h3>
-    <p class="rating-intro">Jede Person bewertet von 1 bis 10. Schlafsituation und Ruhe sind Muss-Kriterien; Werte unter 5 deckeln den Gesamtscore.</p>
+  return `<details class="detail-section rating-section"><summary>Optionale Detailbewertung nach Kriterien</summary><div class="rating-section__inner">
+    <p class="rating-intro">Diese ausführliche Zusatzbewertung betrachtet neun Einzelkriterien. Sie verändert den leicht verständlichen Familien-Durchschnitt und das Ranking nicht.</p>
     <label class="person-select">Wer bewertet?<select id="rating-person">${state.data.familyMembers.map(person => `<option value="${person}">${person}${savedByPerson[person] ? ' · gespeichert' : ''}</option>`).join('')}</select></label>
     <div id="rating-fields">${ratingFields(finca, state.data.familyMembers[0])}</div>
     <label class="rating-comment">Kommentar<textarea id="rating-comment" rows="3" placeholder="Was ist dir besonders wichtig?">${savedByPerson[state.data.familyMembers[0]]?.comment || ''}</textarea></label>
     <label class="favorite-check"><input type="checkbox" id="rating-favorite" ${savedByPerson[state.data.familyMembers[0]]?.favorite ? 'checked' : ''}> Das ist mein persönlicher Favorit</label>
     <button class="save-rating" data-save-rating="${finca.id}">Bewertung speichern</button>
     <p class="rating-saved" id="rating-saved" aria-live="polite"></p>
-    <p class="local-note">Diese Bewertung wird in Version 1 nur auf diesem Gerät gespeichert.</p>
-  </section>`;
+    <p class="local-note">Diese Bewertung wird in Version 1 nur auf diesem Gerät gespeichert.</p></div>
+  </details>`;
 }
 
 function ratingFields(finca, person) {
@@ -306,6 +326,7 @@ function setupEvents() {
   document.addEventListener('change', e => {
     if (e.target.id === 'rating-person') { const id = e.target.closest('#detail-content').querySelector('[data-save-rating]').dataset.saveRating; loadPersonRating(state.data.fincas.find(f => f.id === id), e.target.value); }
     if (e.target.matches('[data-quick-person]')) syncQuickScoreControls(state.data.fincas.find(f => f.id === e.target.dataset.quickPerson), e.target.value);
+    if (e.target.matches('[data-quick-rating]')) render();
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') $$('dialog[open]').forEach(dialog => dialog.close());

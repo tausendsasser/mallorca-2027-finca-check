@@ -106,7 +106,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Außenküche und Poolbereich stark", "Gute Bettenflexibilität"], "personalNegatives": [], "memoryAnchor": "Die Außenküche am großen Pool",
       "ourImpression": "Ses Conies punktet mit einem großen Pool, einer starken Außenküche und vielen flexiblen Schlafplätzen. Das separate Zimmer im Anbau kann praktisch sein, muss für unsere Familienaufteilung aber bewusst vergeben werden. In Erinnerung bleibt der gesellige Außenbereich direkt am Pool.",
-      "availability": { "summary": "Ab 26.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-07-25", "state": "unavailable" }, { "start": "2027-07-26", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Ab 26.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-07-25", "state": "unavailable" }, { "start": "2027-07-26", "end": "2027-08-15", "state": "available" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/24000000/23560000/23552000/23551949/87685344.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Außenbereich von Ses Conies" }], "familyRatings": {}
     },
     {
       "id": "cabrer-canet", "quickRatings": {}, "name": "Cabrer Canet", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p11747066",
@@ -121,7 +121,7 @@
       "personalPositives": ["Gute Lage"], "personalNegatives": ["Pool eher klein", "Keine Klimaanlage erkennbar"], "memoryAnchor": "Canyamel und der tiefe Pool",
       "ourImpression": "Cabrer Canet bietet eine großzügige Schlafkapazität und eine interessante Lage bei Canyamel. Der Pool ist zwar tief, wirkt für unsere Wünsche aber eher klein; außerdem ist keine Klimaanlage erkennbar. Im Gedächtnis bleibt die Nähe zur Küste mit Blick auf die Berge.",
       "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
-      "images": [], "familyRatings": {}
+      "images": [{ "url": "https://media.vrbo.com/lodging/113000000/112410000/112401700/112401624/f8caae9b.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Außenbereich von Cabrer Canet" }], "familyRatings": {}
     },
     {
       "id": "sa-terra-grosa", "quickRatings": {}, "name": "Sa Terra Grosa", "status": "active", "provider": "Fincallorca", "listingUrl": "https://www.fincallorca.de/ferienhaeuser/sa-terra-grosa-binissalem-emf697",
@@ -155,7 +155,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": ["Straße und Nachbarhunde erwähnt"],
       "personalPositives": ["Günstig", "Tiefer Pool", "Schöner Außenbereich"], "personalNegatives": ["Ma-15 hörbar"], "memoryAnchor": "Der 2,50 m tiefe Pool",
       "ourImpression": "Sort Nova bietet viel Platz, einen großen und tiefen Pool sowie einen sehr attraktiven Preis. Die Terrasse-Pool-Verbindung passt gut zu unserem Wunsch nach Geselligkeit. Dagegen steht, dass die Ma-15 und Nachbarhunde hörbar sein könnten; der tiefe Pool bleibt trotzdem sofort im Gedächtnis.",
-      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/35000000/34880000/34873400/34873377/1634a17a.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Außenbereich von Sort Nova Villa" }], "familyRatings": {}
     },
     {
       "id": "casa-son-bordoi", "quickRatings": {}, "name": "Casa Son Bordoi", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6516102",
@@ -190,7 +190,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Gutes Preis-Leistungs-Paket", "Großer Grillbereich"], "personalNegatives": [], "memoryAnchor": "Sechs Einzelbetten und der Grillbereich",
       "ourImpression": "Son Matginet bietet mit sechs Einzelbetten und drei Bädern eine sehr unkomplizierte Aufteilung für uns. Preis, Pool und großer Grillbereich ergeben ein stimmiges Gesamtpaket. Im Gedächtnis bleibt die seltene Kombination aus flexiblen Betten und geselligem Außenbereich.",
-      "availability": { "summary": "Relevantes Urlaubsfenster komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Relevantes Urlaubsfenster komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/22000000/21770000/21762500/21762464/dea7d350.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Außenbereich von Son Matginet 18" }], "familyRatings": {}
     },
     {
       "id": "finca-salord", "quickRatings": {}, "name": "Finca Salord", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p8638268",
@@ -204,7 +204,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Starkes Gesamtpaket", "Extrem privat", "Salzwasserpool"], "personalNegatives": [], "memoryAnchor": "38.000 m² Privatsphäre",
       "ourImpression": "Finca Salord wirkt wie ein starkes Gesamtpaket mit viel Platz, Klimaanlage und großem Salzwasserpool. Das 38.000-m²-Grundstück verspricht genau die Privatsphäre, die uns wichtig ist. Vor einer Entscheidung möchten wir nur die genaue Bettenaufteilung und Poolmaße bestätigen.",
-      "availability": { "summary": "24.07.–14.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-14", "state": "available" }, { "start": "2027-08-15", "end": "2027-08-15", "state": "unavailable" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "24.07.–14.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-14", "state": "available" }, { "start": "2027-08-15", "end": "2027-08-15", "state": "unavailable" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/35000000/34730000/34727000/34726940/e0bbf09c.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Außenbereich von Finca Salord" }], "familyRatings": {}
     },
     {
       "id": "son-morey-tarongers-108", "quickRatings": {}, "name": "Son Morey Tarongers 108", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p2592734",
@@ -218,7 +218,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Palmen und Naturstein sehr schön", "Pool wirkt gut integriert"], "personalNegatives": ["Fenstergitter stören"], "memoryAnchor": "Palmen, Naturstein und der organische Pool",
       "ourImpression": "Son Morey Tarongers wirkt durch Palmen, Naturstein und den organisch integrierten Pool besonders mediterran. Der Außenbereich spricht uns stark an, während die Fenstergitter optisch etwas stören. Im Gedächtnis bleibt vor allem die sehr stimmige Gartenatmosphäre.",
-      "availability": { "summary": "24.07.–15.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "24.07.–15.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/35000000/34430000/34422400/34422362/c91105a7.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Pool und Garten von Son Morey Tarongers 108" }], "familyRatings": {}
     },
     {
       "id": "els-casals", "quickRatings": {}, "name": "Els Casals", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p897166",
@@ -232,7 +232,7 @@
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Starke Ruhe", "Sehr gute Terrasse-Pool-Verbindung"], "personalNegatives": ["Rustikal", "Pool eher klein"], "memoryAnchor": "Die abgeschiedene Terrasse bei Pollença",
       "ourImpression": "Els Casals überzeugt mit einer sehr klaren Schlafaufteilung, vier Bädern und viel Ruhe. Terrasse, Außenessen und Pool liegen für gemeinsames Familienleben gut zusammen. Der rustikale Stil und der eher kleine Pool sind die Gegenpunkte; im Gedächtnis bleibt die abgeschiedene Lage bei Pollença.",
-      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [{ "url": "https://media.vrbo.com/lodging/25000000/24890000/24889000/24888945/fb7aac98.jpg?impolicy=resizecrop&rw=1200&ra=fit", "alt": "Außenbereich von Els Casals" }], "familyRatings": {}
     },
     {
       "id": "ses-velletes-7", "quickRatings": {}, "name": "Ses Velletes 7", "status": "excluded", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p10023975",

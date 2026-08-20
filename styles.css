@@ -44,13 +44,19 @@ main { position:relative; z-index:2; margin-top:-80px; }
 .filters select { width:100%; padding:11px 12px; border:1px solid #d9ded9; border-radius:12px; background:white; color:var(--ink); }
 .spotlight { margin-bottom:18px; }
 .spotlight-card { min-height:300px; display:flex; align-items:flex-end; overflow:hidden; position:relative; color:white; border-radius:30px; padding:24px; box-shadow:var(--shadow); background:linear-gradient(35deg, rgba(22,50,41,.93), rgba(35,72,59,.18)), var(--card-art); }
+.spotlight-card.has-winner { box-shadow:0 0 0 3px #d7ae79, 0 18px 50px rgba(35,72,59,.18); }
+.spotlight-card > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.spotlight-card > img + div { text-shadow:0 2px 18px rgba(0,0,0,.45); }
 .spotlight-card::before, .finca-image::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 78% 30%, rgba(255,255,255,.28) 0 7%, transparent 8%), linear-gradient(135deg, transparent 50%, rgba(255,255,255,.12)); }
 .spotlight-card > * { position:relative; z-index:1; }
 .spotlight-card h3 { font-size:2.25rem; max-width:80%; }
 .spotlight-meta { display:flex; gap:12px; align-items:center; margin-top:10px; color:rgba(255,255,255,.82); font-size:.85rem; }
 .score-badge { position:absolute; right:18px; top:18px; display:grid; place-items:center; width:62px; height:62px; border-radius:50%; background:rgba(255,255,255,.92); color:var(--forest); font-weight:800; }
+.score-badge small { display:block; font-size:.52rem; margin-top:-17px; }
+.spotlight-link { display:inline-block; margin-top:15px; padding:9px 13px; border-radius:999px; color:var(--forest); background:rgba(255,255,255,.92); text-decoration:none; font-size:.72rem; font-weight:800; text-shadow:none; }
 .finca-grid { display:grid; gap:16px; }
 .finca-card { overflow:hidden; border-radius:var(--radius); background:white; box-shadow:0 10px 34px rgba(35,72,59,.08); transition:transform .2s ease, box-shadow .2s ease; }
+.finca-card.is-winner { box-shadow:0 0 0 3px #d7ae79, 0 15px 42px rgba(111,82,35,.18); }
 .finca-card:active { transform:scale(.985); }
 .finca-image { position:relative; height:175px; background:var(--card-art); }
 .finca-image img, .detail-hero > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
@@ -60,6 +66,11 @@ main { position:relative; z-index:2; margin-top:-80px; }
 .gallery-arrow--right { right:10px; }
 .image-count { position:absolute; z-index:4; right:12px; bottom:10px; padding:5px 9px; border-radius:999px; color:white; background:rgba(20,35,29,.62); font-size:.68rem; }
 .finca-status { position:absolute; z-index:1; left:13px; top:13px; padding:7px 10px; border-radius:999px; font-size:.7rem; font-weight:700; background:rgba(255,255,255,.88); color:var(--forest); }
+.rank-badge { position:absolute; z-index:3; left:13px; bottom:11px; padding:7px 11px; border-radius:999px; background:#d7ae79; color:#382b17; font-size:.7rem; font-weight:800; }
+.photo-score { position:absolute; z-index:3; right:12px; bottom:10px; display:grid; place-items:center; width:54px; height:54px; border-radius:50%; background:white; color:var(--forest); font-size:1.15rem; font-weight:800; box-shadow:0 5px 20px rgba(0,0,0,.18); }
+.photo-score small { display:block; font-size:.48rem; margin-top:-13px; }
+.photo-score.empty { color:var(--muted); }
+.finca-image .image-count { right:74px; }
 .finca-status.excluded { color:var(--danger); }
 .favorite { position:absolute; z-index:1; right:12px; top:12px; border:0; width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.88); color:var(--forest); font-size:1.2rem; }
 .favorite.is-favorite { color:var(--terracotta); }
@@ -70,6 +81,15 @@ main { position:relative; z-index:2; margin-top:-80px; }
 .price small { display:block; color:var(--muted); font-size:.6rem; text-align:right; font-weight:500; }
 .quick-facts { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0; }
 .quick-facts span { padding:7px 9px; border-radius:9px; background:#f2f5f1; font-size:.72rem; }
+.criteria-strip { display:flex; gap:7px; margin:11px 0; }
+.criterion-hint { position:relative; flex:1; padding:8px; border-radius:10px; background:#f7eddb; color:#725525; font-size:.68rem; }
+.criterion-hint.good { background:#e6f0e5; color:#315c42; }
+.criterion-hint small { display:none; position:absolute; z-index:8; left:0; right:0; top:calc(100% + 4px); padding:9px; border-radius:9px; color:white; background:var(--forest-dark); line-height:1.4; }
+.criterion-hint:hover small, .criterion-hint:focus small { display:block; }
+.family-rating-line { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0; }
+.member-score { display:flex; gap:4px; padding:5px 7px; border-radius:999px; background:#f0f1ed; color:var(--muted); font-size:.62rem; }
+.member-score.has-score { background:var(--sage); color:var(--forest); }
+.member-score b { font-weight:700; }
 .availability { margin-top:16px; }
 .availability-head { display:flex; justify-content:space-between; font-size:.68rem; color:var(--muted); margin-bottom:7px; }
 .availability-track { display:grid; grid-template-columns:repeat(23,1fr); gap:1px; overflow:hidden; height:12px; border-radius:999px; background:#e5e5df; }
@@ -100,6 +120,7 @@ main { position:relative; z-index:2; margin-top:-80px; }
 .comparison-section > * { max-width:1144px; margin-left:auto; margin-right:auto; }
 .comparison-list { display:grid; gap:12px; }
 .comparison-card { display:grid; grid-template-columns:48px 1fr auto; gap:12px; align-items:center; padding:16px; border-radius:18px; background:white; }
+.comparison-card.is-winner { box-shadow:inset 0 0 0 2px #d7ae79; }
 .rank { display:grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--sand); color:var(--forest); font:700 1.1rem "Fraunces"; }
 .comparison-card p { margin:5px 0 0; color:var(--muted); font-size:.76rem; }
 .comparison-score { font-weight:800; color:var(--forest); }
@@ -138,7 +159,9 @@ dialog::backdrop { background:rgba(20,35,29,.58); backdrop-filter:blur(3px); }
 .note { padding:14px; border-radius:14px; background:#f4f6f2; font-size:.84rem; }
 .note.negative { background:#f8eeee; }
 .detail-cta { display:block; padding:14px; border-radius:14px; background:var(--forest); color:white; text-align:center; text-decoration:none; font-weight:700; }
-.rating-section { background:#f1f5ef; margin:10px -22px 24px; padding:24px 22px; }
+.rating-section { background:#f1f5ef; margin:10px -22px 24px; padding:18px 22px; }
+.rating-section summary { cursor:pointer; color:var(--forest); font-family:"Fraunces",serif; font-weight:700; }
+.rating-section__inner { padding-top:8px; }
 .rating-section .eyebrow { color:var(--terracotta); }
 .rating-intro, .local-note { color:var(--muted); font-size:.77rem; line-height:1.5; }
 .person-select, .rating-comment { display:grid; gap:7px; margin:18px 0; font-size:.78rem; font-weight:700; }
