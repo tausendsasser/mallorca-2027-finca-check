@@ -41,7 +41,13 @@
       "outdoorArea": "Großer Pool", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Sehr großer Pool"], "personalNegatives": ["Schlaflösung eher ein Minus"], "memoryAnchor": "Der 66-m²-Pool", 
-      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [
+        { "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_01.jpg", "alt": "Pool von Can Salat de Tiraset" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_02.jpg", "alt": "Poolbereich von Can Salat de Tiraset" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_03.jpg", "alt": "Außenbereich am Pool" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_04.jpg", "alt": "Weitere Poolansicht" }
+      ], "familyRatings": {}
     },
     {
       "id": "short-de-carrossa", "name": "S’Hort de Carrossa", "status": "active", "provider": "Fincallorca", "listingUrl": "https://www.fincallorca.de/ferienhaeuser/short-de-carrossa-arta-emf658",
@@ -52,7 +58,13 @@
       "outdoorArea": "Großes, privates Grundstück", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Gut, Poolbereich aber erhöht", "poolVisibility": "Teilweise", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Tolles Grundstück", "Sehr privat"], "personalNegatives": ["Edelstahlzaun am Pool stört optisch"], "memoryAnchor": "Der lange Privatweg",
-      "availability": { "summary": "20.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "20.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [
+        { "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_01.jpg", "alt": "Pool von S’Hort de Carrossa" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_02.jpg", "alt": "Poolbereich von S’Hort de Carrossa" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_03.jpg", "alt": "Außenbereich am Pool" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_04.jpg", "alt": "Weitere Poolansicht" }
+      ], "familyRatings": {}
     },
     {
       "id": "es-fetget", "name": "Es Fetget", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6119251",
@@ -63,7 +75,14 @@
       "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": ["Ruhe und Privatsphäre"], "reviewNegatives": [],
       "personalPositives": ["Starker Kandidat"], "personalNegatives": ["Vergleichsweise teuer"], "memoryAnchor": "Der ruhige Nordosten",
-      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [
+        { "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/49b596ba.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Pool und Außenbereich von Es Fetget" },
+        { "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/b1e357ff.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Blick aus dem Haus zum Pool" },
+        { "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/a7858c70.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Haus und Pool" },
+        { "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/aad92bad.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Wohnbereich" },
+        { "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/68299964.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Essbereich" }
+      ], "familyRatings": {}
     },
     {
       "id": "ses-conies", "name": "Ses Conies", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p2724304",
@@ -85,7 +104,8 @@
       "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Gute Lage"], "personalNegatives": ["Pool eher klein", "Keine Klimaanlage erkennbar"], "memoryAnchor": "Canyamel und der tiefe Pool",
-      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [], "familyRatings": {}
     },
     {
       "id": "sa-terra-grosa", "name": "Sa Terra Grosa", "status": "active", "provider": "Fincallorca", "listingUrl": "https://www.fincallorca.de/ferienhaeuser/sa-terra-grosa-binissalem-emf697",
@@ -96,7 +116,13 @@
       "outdoorArea": "Garten wirkt eher trist", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Gut", "poolVisibility": "Gut", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Starke Schlafaufteilung"], "personalNegatives": ["Garten wirkt trist", "Nachbar sichtbar"], "memoryAnchor": "Die gute Aufteilung über zwei Etagen",
-      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [
+        { "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_01.jpg", "alt": "Pool von Sa Terra Grosa" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_02.jpg", "alt": "Poolbereich von Sa Terra Grosa" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_03.jpg", "alt": "Weitere Poolansicht" },
+        { "url": "https://image.novasol.com/pic/1024/emf/emf697_outdoor_01.jpg", "alt": "Außenbereich von Sa Terra Grosa" }
+      ], "familyRatings": {}
     },
     {
       "id": "sort-nova-villa", "name": "Sort Nova Villa", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1949105",
@@ -107,7 +133,7 @@
       "outdoorArea": "Schön und großzügig", "coveredTerrace": "Ja", "kitchenToTerrace": "Gut", "terraceToPool": "Sehr gut", "poolVisibility": "Sehr gut", "outdoorKitchen": "unknown", "barbecue": "Ja",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": ["Straße und Nachbarhunde erwähnt"],
       "personalPositives": ["Günstig", "Tiefer Pool", "Schöner Außenbereich"], "personalNegatives": ["Ma-15 hörbar"], "memoryAnchor": "Der 2,50 m tiefe Pool",
-      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
     },
     {
       "id": "casa-son-bordoi", "name": "Casa Son Bordoi", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6516102",
@@ -118,7 +144,14 @@
       "outdoorArea": "Modern", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": ["Sehr gute Bewertungen"], "reviewNegatives": [],
       "personalPositives": ["Modern", "Sehr gute Bewertungen"], "personalNegatives": ["Weniger abgeschieden"], "memoryAnchor": "Das moderne Haus in Llubí",
-      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] },
+      "images": [
+        { "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/6850e3cc.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Pool und Haus von Casa Son Bordoi" },
+        { "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/c4ccc600.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Wohnbereich" },
+        { "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/56092d90.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Terrasse und Hauseingang" },
+        { "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/86e97fbf.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Küche und Essbereich" },
+        { "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/a809b91a.jpg?impolicy=resizecrop&ra=fit&rw=1200", "alt": "Moderne Küche" }
+      ], "familyRatings": {}
     },
     {
       "id": "son-matginet-18", "name": "Son Matginet 18", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p8098944",
@@ -162,7 +195,7 @@
       "outdoorArea": "Rustikal und ruhig", "coveredTerrace": "Ja", "kitchenToTerrace": "Gut", "terraceToPool": "Sehr gut", "poolVisibility": "Sehr gut", "outdoorKitchen": "unknown", "barbecue": "Ja",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
       "personalPositives": ["Starke Ruhe", "Sehr gute Terrasse-Pool-Verbindung"], "personalNegatives": ["Rustikal", "Pool eher klein"], "memoryAnchor": "Die abgeschiedene Terrasse bei Pollença",
-      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+      "availability": { "summary": "Im Suchzeitraum verfügbar", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
     },
     {
       "id": "ses-velletes-7", "name": "Ses Velletes 7", "status": "excluded", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p10023975",

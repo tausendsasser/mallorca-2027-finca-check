@@ -80,6 +80,14 @@
     </form>
   </dialog>
 
+  <dialog class="lightbox" id="lightbox">
+    <button class="dialog-close" data-close-lightbox aria-label="Bild schließen">×</button>
+    <button class="gallery-arrow gallery-arrow--left" data-lightbox-step="-1" aria-label="Vorheriges Bild">‹</button>
+    <img id="lightbox-image" alt="Vergrößerte Finca-Ansicht">
+    <button class="gallery-arrow gallery-arrow--right" data-lightbox-step="1" aria-label="Nächstes Bild">›</button>
+    <span class="lightbox-count" id="lightbox-count"></span>
+  </dialog>
+
   <template id="loading-template"><div class="loading"><span></span><p>Unsere Fincas werden vorbereitet …</p></div></template>
   <script src="app.js" defer></script>
 </body>

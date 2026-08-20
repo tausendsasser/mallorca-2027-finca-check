@@ -1,4 +1,11 @@
-const state = { data: null, status: 'active', region: 'all', sort: 'score', favorites: new Set(JSON.parse(localStorage.getItem('finca-favorites') || '[]')) };
+const state = {
+  data: null,
+  status: 'active',
+  region: 'all',
+  sort: 'score',
+  favorites: new Set(JSON.parse(localStorage.getItem('finca-favorites') || '[]')),
+  localRatings: JSON.parse(localStorage.getItem('finca-ratings') || '{}')
+};
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -10,9 +17,17 @@ const art = finca => {
   const index = [...finca.id].reduce((sum, char) => sum + char.charCodeAt(0), 0) % palettes.length;
   return `linear-gradient(145deg, ${palettes[index][0]}, ${palettes[index][1]})`;
 };
+const gallery = finca => (finca.images || []).map(image => typeof image === 'string' ? { url: image, alt: finca.name } : image).filter(image => image.url);
+
+function galleryMedia(finca, context = 'card') {
+  const images = gallery(finca);
+  if (!images.length) return '';
+  return `<img src="${images[0].url}" alt="${images[0].alt || finca.name}" ${context === 'card' ? 'loading="lazy"' : ''} data-gallery-image="${finca.id}">
+    ${images.length > 1 ? `<button class="gallery-arrow gallery-arrow--left" data-gallery-step="-1" data-gallery-id="${finca.id}" aria-label="Vorheriges Bild">‹</button><button class="gallery-arrow gallery-arrow--right" data-gallery-step="1" data-gallery-id="${finca.id}" aria-label="Nächstes Bild">›</button><span class="image-count" data-gallery-count="${finca.id}">1 / ${images.length}</span>` : ''}`;
+}
 
 function ratingSummary(finca) {
-  const ratings = Object.values(finca.familyRatings || {}).filter(entry => entry && entry.scores);
+  const ratings = Object.values({ ...(finca.familyRatings || {}), ...(state.localRatings[finca.id] || {}) }).filter(entry => entry && entry.scores);
   if (!ratings.length) return { score: null, mustPass: null, count: 0 };
   const criteria = state.data.ratingCriteria;
   const results = ratings.map(rating => {
@@ -79,6 +94,7 @@ function card(finca) {
   const score = ratingSummary(finca);
   return `<article class="finca-card" style="--card-art:${art(finca)}">
     <div class="finca-image">
+      ${galleryMedia(finca)}
       <span class="finca-status ${finca.status}">${finca.status === 'excluded' ? 'Ausgeschieden' : finca.status === 'candidate' ? 'Kandidat' : 'In Auswahl'}</span>
       <button class="favorite ${state.favorites.has(finca.id) ? 'is-favorite' : ''}" data-favorite="${finca.id}" aria-label="Favorit">${state.favorites.has(finca.id) ? '♥' : '♡'}</button>
     </div>
@@ -118,27 +134,70 @@ function render() {
 function renderDetail(finca) {
   const pool = finca.pool || {};
   const notes = [...(finca.personalPositives || []).map(x => `<div class="note">＋ ${x}</div>`), ...(finca.personalNegatives || []).map(x => `<div class="note negative">− ${x}</div>`)];
-  $('#detail-content').innerHTML = `<div class="detail-hero" style="--card-art:${art(finca)}"><button class="dialog-close" data-close-detail aria-label="Schließen">×</button><div><p class="eyebrow">${text(finca.region)} · ${text(finca.location)}</p><h2>${finca.name}</h2></div></div>
+  $('#detail-content').innerHTML = `<div class="detail-hero" style="--card-art:${art(finca)}" data-enlarge="${finca.id}">${galleryMedia(finca, 'detail')}<button class="dialog-close" data-close-detail aria-label="Schließen">×</button><div><p class="eyebrow">${text(finca.region)} · ${text(finca.location)}</p><h2>${finca.name}</h2></div></div>
     <div class="detail-body">
       <div class="detail-summary"><div><strong>${money(finca.price)}</strong><span>${finca.nights || state.data.trip.nights} Nächte</span></div><div><strong>${text(finca.bedrooms)}</strong><span>Schlafzimmer</span></div><div><strong>${text(finca.bathrooms)}</strong><span>Bäder</span></div></div>
       ${availabilityBar(finca)}
+      <div class="availability-legend"><span><i class="available"></i> verfügbar</span><span><i class="unavailable"></i> nicht verfügbar</span><span><i class="unknown"></i> ungeklärt</span><p>Die dunkle Unterkante markiert unseren Idealzeitraum. Der Balken umfasst das gesamte mögliche Urlaubsfenster.</p></div>
       <section class="detail-section"><h3>Schlafen & Komfort</h3><div class="fact-list">
-        ${fact('Betten', finca.bedConfiguration)}${fact('Klimaanlage', finca.airConditioning)}${fact('Waschmaschine', finca.washingMachine)}
+        ${fact('Betten-Situation', finca.bedConfiguration)}${explanation('Entscheidend ist, ob Erwachsene und Kinder passende, getrennte Schlafplätze bekommen – ohne ungünstige offene Galerie oder reine Notlösung.')}${fact('Klimaanlage', finca.airConditioning)}${fact('Waschmaschine', finca.washingMachine)}
       </div></section>
       <section class="detail-section"><h3>Pool & Geselligkeit</h3><div class="fact-list">
-        ${fact('Pool', pool.display)}${fact('Tiefe', depth(pool))}${fact('Springen & Toben', pool.jumpingAssessment)}${fact('Terrasse → Pool', finca.terraceToPool)}${fact('Pool im Blick', finca.poolVisibility)}${fact('Außenküche', finca.outdoorKitchen)}${fact('Grill', finca.barbecue)}
+        ${fact('Pool', pool.display)}${fact('Tiefe', depth(pool))}${fact('Springen & Toben', pool.jumpingAssessment)}${fact('Terrasse → Pool', finca.terraceToPool)}${fact('Pool im Blick', finca.poolVisibility)}${explanation('„Pool im Blick“ bewertet, ob man die Kinder vom Esstisch, der überdachten Terrasse oder aus der Küche direkt sehen kann – ohne Mauern, Höhenversatz oder entfernten Poolbereich.')}${fact('Außenküche', finca.outdoorKitchen)}${fact('Grill', finca.barbecue)}
       </div></section>
       <section class="detail-section"><h3>Lage & Atmosphäre</h3><div class="fact-list">
         ${fact('Privatsphäre', finca.privacy)}${fact('Nachbarn', finca.neighbours)}${fact('Straßenlärm', finca.roadNoise)}${fact('Außenbereich', finca.outdoorArea)}${fact('Strand', finca.beachDistance)}${fact('Ort', finca.townDistance)}
       </div></section>
       ${notes.length ? `<section class="detail-section"><h3>Unser Eindruck</h3><div class="notes">${notes.join('')}</div>${finca.memoryAnchor ? `<p><strong>Erinnerungsanker:</strong> ${finca.memoryAnchor}</p>` : ''}</section>` : ''}
+      ${ratingPanel(finca)}
       <a class="detail-cta" href="${finca.listingUrl}" target="_blank" rel="noopener">Original-Inserat öffnen ↗</a>
     </div>`;
   $('#detail-dialog').showModal();
 }
 
 function fact(label, value) { return `<div class="fact-row"><span>${label}</span><strong>${text(value)}</strong></div>`; }
+function explanation(value) { return `<p class="fact-explanation">${value}</p>`; }
 function depth(pool) { return unknown(pool.minDepth) && unknown(pool.maxDepth) ? null : `${text(pool.minDepth)}–${text(pool.maxDepth)} m`; }
+
+function ratingPanel(finca) {
+  const savedByPerson = { ...(finca.familyRatings || {}), ...(state.localRatings[finca.id] || {}) };
+  return `<section class="detail-section rating-section">
+    <p class="eyebrow">Familienwertung</p><h3>Wie fühlt sich diese Finca an?</h3>
+    <p class="rating-intro">Jede Person bewertet von 1 bis 10. Schlafsituation und Ruhe sind Muss-Kriterien; Werte unter 5 deckeln den Gesamtscore.</p>
+    <label class="person-select">Wer bewertet?<select id="rating-person">${state.data.familyMembers.map(person => `<option value="${person}">${person}${savedByPerson[person] ? ' · gespeichert' : ''}</option>`).join('')}</select></label>
+    <div id="rating-fields">${ratingFields(finca, state.data.familyMembers[0])}</div>
+    <label class="rating-comment">Kommentar<textarea id="rating-comment" rows="3" placeholder="Was ist dir besonders wichtig?">${savedByPerson[state.data.familyMembers[0]]?.comment || ''}</textarea></label>
+    <label class="favorite-check"><input type="checkbox" id="rating-favorite" ${savedByPerson[state.data.familyMembers[0]]?.favorite ? 'checked' : ''}> Das ist mein persönlicher Favorit</label>
+    <button class="save-rating" data-save-rating="${finca.id}">Bewertung speichern</button>
+    <p class="rating-saved" id="rating-saved" aria-live="polite"></p>
+    <p class="local-note">Diese Bewertung wird in Version 1 nur auf diesem Gerät gespeichert.</p>
+  </section>`;
+}
+
+function ratingFields(finca, person) {
+  const saved = (state.localRatings[finca.id]?.[person] || finca.familyRatings?.[person] || {}).scores || {};
+  return state.data.ratingCriteria.map(criterion => {
+    const value = saved[criterion.id] ?? 5;
+    return `<label class="rating-row"><span>${criterion.label}${criterion.required ? ' <b>Muss</b>' : ''}</span><output>${value}</output><input type="range" min="1" max="10" value="${value}" data-rating-criterion="${criterion.id}" aria-label="${criterion.label}"></label>`;
+  }).join('');
+}
+
+function loadPersonRating(finca, person) {
+  $('#rating-fields').innerHTML = ratingFields(finca, person);
+  const saved = state.localRatings[finca.id]?.[person] || finca.familyRatings?.[person] || {};
+  $('#rating-comment').value = saved.comment || '';
+  $('#rating-favorite').checked = Boolean(saved.favorite);
+}
+
+function saveRating(finca) {
+  const person = $('#rating-person').value;
+  const scores = Object.fromEntries($$('[data-rating-criterion]').map(input => [input.dataset.ratingCriterion, Number(input.value)]));
+  state.localRatings[finca.id] ||= {};
+  state.localRatings[finca.id][person] = { scores, comment: $('#rating-comment').value.trim(), dealbreaker: null, favorite: $('#rating-favorite').checked };
+  localStorage.setItem('finca-ratings', JSON.stringify(state.localRatings));
+  $('#rating-saved').textContent = `Bewertung von ${person} gespeichert. Neuer Familienwert: ${ratingSummary(finca).score?.toFixed(1) || '–'}`;
+  render();
+}
 
 function populateFilters() {
   const regions = [...new Set(state.data.fincas.map(f => f.region).filter(Boolean))].sort();
@@ -147,11 +206,20 @@ function populateFilters() {
 
 function setupEvents() {
   document.addEventListener('click', event => {
+    const galleryButton = event.target.closest('[data-gallery-step]');
+    if (galleryButton) { event.stopPropagation(); stepGallery(galleryButton.dataset.galleryId, Number(galleryButton.dataset.galleryStep), galleryButton.closest('.finca-image, .detail-hero')); return; }
     const detail = event.target.closest('[data-detail]');
     if (detail) renderDetail(state.data.fincas.find(f => f.id === detail.dataset.detail));
     const favorite = event.target.closest('[data-favorite]');
     if (favorite) { event.stopPropagation(); state.favorites.has(favorite.dataset.favorite) ? state.favorites.delete(favorite.dataset.favorite) : state.favorites.add(favorite.dataset.favorite); localStorage.setItem('finca-favorites', JSON.stringify([...state.favorites])); render(); }
     if (event.target.closest('[data-close-detail]')) $('#detail-dialog').close();
+    if (event.target.closest('[data-close-lightbox]')) $('#lightbox').close();
+    const enlarge = event.target.closest('[data-enlarge]');
+    if (enlarge && event.target.tagName === 'IMG') openLightbox(enlarge.dataset.enlarge, Number(event.target.dataset.index || 0));
+    const lightboxStep = event.target.closest('[data-lightbox-step]');
+    if (lightboxStep) stepLightbox(Number(lightboxStep.dataset.lightboxStep));
+    const saveButton = event.target.closest('[data-save-rating]');
+    if (saveButton) saveRating(state.data.fincas.find(f => f.id === saveButton.dataset.saveRating));
     if (event.target.closest('[data-action="toggle-filters"]')) { const filters = $('#filters'); filters.hidden = !filters.hidden; event.target.closest('button').setAttribute('aria-expanded', String(!filters.hidden)); }
     if (event.target.closest('[data-action="open-suggest"]')) $('#suggest-dialog').showModal();
     const scroll = event.target.closest('[data-scroll]');
@@ -162,7 +230,34 @@ function setupEvents() {
   $('#status-filter').addEventListener('change', e => { state.status = e.target.value; render(); });
   $('#region-filter').addEventListener('change', e => { state.region = e.target.value; render(); });
   $('#sort-select').addEventListener('change', e => { state.sort = e.target.value; render(); });
+  document.addEventListener('input', e => { if (e.target.matches('[data-rating-criterion]')) e.target.closest('.rating-row').querySelector('output').value = e.target.value; });
+  document.addEventListener('change', e => { if (e.target.id === 'rating-person') { const id = e.target.closest('#detail-content').querySelector('[data-save-rating]').dataset.saveRating; loadPersonRating(state.data.fincas.find(f => f.id === id), e.target.value); } });
   $('#detail-dialog').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+}
+
+function stepGallery(id, delta, container) {
+  const finca = state.data.fincas.find(f => f.id === id);
+  const images = gallery(finca);
+  const img = $('[data-gallery-image]', container);
+  const current = Number(img.dataset.index || 0);
+  const next = (current + delta + images.length) % images.length;
+  img.src = images[next].url; img.alt = images[next].alt || finca.name; img.dataset.index = next;
+  const count = $('[data-gallery-count]', container); if (count) count.textContent = `${next + 1} / ${images.length}`;
+}
+
+function openLightbox(id, index) {
+  const box = $('#lightbox'); box.dataset.fincaId = id; box.dataset.index = index;
+  updateLightbox(); box.showModal();
+}
+
+function stepLightbox(delta) {
+  const box = $('#lightbox'); const images = gallery(state.data.fincas.find(f => f.id === box.dataset.fincaId));
+  box.dataset.index = (Number(box.dataset.index || 0) + delta + images.length) % images.length; updateLightbox();
+}
+
+function updateLightbox() {
+  const box = $('#lightbox'); const finca = state.data.fincas.find(f => f.id === box.dataset.fincaId); const images = gallery(finca); const index = Number(box.dataset.index || 0);
+  $('#lightbox-image').src = images[index].url; $('#lightbox-image').alt = images[index].alt || finca.name; $('#lightbox-count').textContent = `${index + 1} / ${images.length}`;
 }
 
 async function shareSuggestion(channel) {

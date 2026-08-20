@@ -24,7 +24,7 @@ Mindestens erforderlich sind:
 - `location`, `region`, `islandArea`
 - `price`, `currency`, `nights`, `adults`, `children`
 - `availability.intervals`
-- `images` (darf leer sein)
+- `images` (darf leer sein; bevorzugt bis zu fünf öffentliche Vorschaubilder des Originalanbieters)
 - `familyRatings` (darf leer sein)
 
 Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten Angaben `null`, `"unknown"`, `[]` oder `{}` passend zum Feldtyp. Keine Felder entfernen, nur weil Daten fehlen.
@@ -94,7 +94,9 @@ Alle übrigen Felder bleiben im Datensatz vorhanden und erhalten bei unbekannten
       { "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }
     ]
   },
-  "images": [],
+  "images": [
+    { "url": "https://anbieter.example/bild-1.jpg", "alt": "Pool und Terrasse" }
+  ],
   "familyRatings": {}
 }
 ```
@@ -137,6 +139,8 @@ Die Schlüssel unter `familyRatings` müssen aus `familyMembers` stammen. Werte 
 
 Die App berechnet die gewichtete Wertung aus `ratingCriteria`. Liegt `sleeping` oder `privacy` unter 5, wird die Gesamtwertung gemäß `mustCriteriaScoreCap` gedeckelt.
 
+Bewertungen, die Besucher direkt in Version 1 der Website eingeben, werden im Browser des jeweiligen Geräts gespeichert (`localStorage`). Sie erscheinen deshalb nicht automatisch auf anderen Geräten und verändern `fincas.json` nicht. Für eine spätere geräteübergreifende Familienbewertung wird eine kleine zentrale Schreibschnittstelle oder ein Formular-/Sheet-Workflow benötigt.
+
 ## Sicherer Update-Ablauf für einen KI-Agenten
 
 1. `data/fincas.json` lesen und nach identischer `listingUrl` sowie ähnlichem Namen suchen.
@@ -144,5 +148,6 @@ Die App berechnet die gewichtete Wertung aus `ratingCriteria`. Liegt `sleeping` 
 3. Bei einer ausgeschlossenen Finca den Ausschluss respektieren und nur auf ausdrücklichen Wunsch ändern.
 4. Bei einer neuen Finca das Beispiel vollständig kopieren, eine eindeutige `id` vergeben und recherchierte Felder ergänzen.
 5. JSON-Syntax prüfen und sicherstellen, dass alle IDs eindeutig sind.
+   Bei Bildern nur öffentliche Anbieter-URLs referenzieren, keine fremden Bilddateien ins Repository kopieren. Funktioniert eine Bild-URL nicht mehr, wird sie ersetzt oder aus `images` entfernt.
 6. Nur `data/fincas.json` ändern, sofern keine neue Frontend-Funktion angefordert wurde.
 7. Änderung committen und auf den GitHub-Pages-Branch veröffentlichen. GitHub Pages aktualisiert die App anschließend automatisch.
