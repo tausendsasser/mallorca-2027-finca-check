@@ -142,6 +142,39 @@ function criterionHint(label, status, detail) { return `<span class="criterion-h
 function sleepingStatus(finca) { return /prüfen|ungünstig|offen|separat|noch nicht/i.test(finca.sleepingConsiderations || '') ? 'check' : 'good'; }
 function quietStatus(finca) { return /prüfen|hörbar|möglich|straße|ortsnah|nachbar/i.test(`${finca.privacy} ${finca.roadNoise}`) ? 'check' : 'good'; }
 
+function poolArea(pool = {}) {
+  if (!unknown(pool.area) && Number.isFinite(Number(pool.area))) return Number(pool.area);
+  if (!unknown(pool.length) && !unknown(pool.width) && Number.isFinite(Number(pool.length)) && Number.isFinite(Number(pool.width))) return Number(pool.length) * Number(pool.width);
+  return null;
+}
+
+function poolSummary(pool = {}) {
+  const area = poolArea(pool);
+  const number = value => new Intl.NumberFormat('de-DE', { maximumFractionDigits:1 }).format(value);
+  const parts = [];
+  if (area !== null) parts.push(`${number(area)} m²`);
+  if (!unknown(pool.length) && !unknown(pool.width)) parts.push(`${number(pool.length)} × ${number(pool.width)} m`);
+  if (!unknown(pool.minDepth) || !unknown(pool.maxDepth)) {
+    const depthText = !unknown(pool.minDepth) && !unknown(pool.maxDepth) && Number(pool.minDepth) !== Number(pool.maxDepth)
+      ? `${number(pool.minDepth)}–${number(pool.maxDepth)} m tief`
+      : `${number(!unknown(pool.maxDepth) ? pool.maxDepth : pool.minDepth)} m tief`;
+    parts.push(depthText);
+  }
+  if (pool.saltwater === true) parts.push('Salzwasser');
+  if (!parts.length) parts.push(text(pool.display, 'Maße offen'));
+  return parts.join(' · ');
+}
+
+function largestPoolArea() {
+  return Math.max(...state.data.fincas.filter(finca => finca.status !== 'excluded').map(finca => poolArea(finca.pool)).filter(area => area !== null));
+}
+
+function poolBadge(finca) {
+  const area = poolArea(finca.pool);
+  const largest = area !== null && area === largestPoolArea();
+  return `<span class="pool-fact ${largest ? 'is-largest' : ''}">◉ Pool ${poolSummary(finca.pool)}${largest ? '<b>Größter Pool</b>' : ''}</span>`;
+}
+
 function card(finca) {
   const family = quickRatingSummary(finca);
   const rank = rankOf(finca);
@@ -156,7 +189,7 @@ function card(finca) {
     <div class="finca-body">
       <span class="finca-kicker">${text(finca.region)} · ${text(finca.location)}</span>
       <div class="finca-title-row"><h3>${finca.name}</h3><div class="price">${money(finca.price)}<small>${finca.nights || state.data.trip.nights} Nächte</small></div></div>
-      <div class="quick-facts"><span>⌂ ${text(finca.bedrooms)} Schlafzimmer</span><span>◉ Pool ${text(finca.pool?.display, 'Maße offen')}</span></div>
+      <div class="quick-facts"><span>⌂ ${text(finca.bedrooms)} Schlafzimmer</span>${poolBadge(finca)}</div>
       <div class="criteria-strip">${criterionHint('Schlafen', sleepingStatus(finca), finca.sleepingConsiderations)}${criterionHint('Ruhe', quietStatus(finca), `${finca.privacy}; ${finca.roadNoise}`)}</div>
       ${familyRatingLine(finca)}
       ${availabilityBar(finca)}
@@ -180,7 +213,7 @@ function renderSpotlight(list) {
 
 function renderComparison() {
   const ranked = ranking().slice(0,5);
-  $('#comparison-list').innerHTML = ranked.map((f,i) => { const family=quickRatingSummary(f); return `<article class="comparison-card ${i===0&&family.count?'is-winner':''}" data-detail="${f.id}"><span class="rank">${i+1}</span><div><h3>${f.name}</h3><p>${text(f.region)} · ${money(f.price)} · Pool ${text(f.pool?.display)}</p>${familyRatingLine(f)}</div><span class="comparison-score">${family.average?.toFixed(1) || 'offen'}</span></article>`; }).join('');
+  $('#comparison-list').innerHTML = ranked.map((f,i) => { const family=quickRatingSummary(f); return `<article class="comparison-card ${i===0&&family.count?'is-winner':''}" data-detail="${f.id}"><span class="rank">${i+1}</span><div><h3>${f.name}</h3><p>${text(f.region)} · ${money(f.price)} · Pool ${poolSummary(f.pool)}</p>${familyRatingLine(f)}</div><span class="comparison-score">${family.average?.toFixed(1) || 'offen'}</span></article>`; }).join('');
 }
 
 function render() {
@@ -203,7 +236,7 @@ function renderDetail(finca) {
         ${fact('Kapazität', finca.sleepingCapacity || (!unknown(finca.beds) ? `${finca.beds} Schlafplätze – grundsätzlich großzügig.` : 'Kapazität noch zu prüfen.'))}${fact('Praktische Aufteilung', finca.sleepingConsiderations || finca.bedConfiguration)}${explanation('Die Anzahl der Schlafplätze ist zunächst positiv oder neutral. Separat betrachten wir, ob ihre Verteilung für Erwachsene und Kinder praktisch funktioniert.')}${fact('Klimaanlage', finca.airConditioning)}${fact('Waschmaschine', finca.washingMachine)}
       </div></section>
       <section class="detail-section"><h3>Pool & Geselligkeit</h3><div class="fact-list">
-        ${fact('Pool', pool.display)}${fact('Tiefe', depth(pool))}${fact('Springen & Toben', pool.jumpingAssessment)}${fact('Terrasse → Pool', finca.terraceToPool)}${fact('Pool im Blick', finca.poolVisibility)}${explanation('„Pool im Blick“ bewertet, ob man die Kinder vom Esstisch, der überdachten Terrasse oder aus der Küche direkt sehen kann – ohne Mauern, Höhenversatz oder entfernten Poolbereich.')}${fact('Außenküche', finca.outdoorKitchen)}${fact('Grill', finca.barbecue)}
+        ${fact('Poolgröße', poolSummary(pool))}${fact('Springen & Toben', pool.jumpingAssessment)}${fact('Terrasse → Pool', finca.terraceToPool)}${fact('Pool im Blick', finca.poolVisibility)}${explanation('„Pool im Blick“ bewertet, ob man die Kinder vom Esstisch, der überdachten Terrasse oder aus der Küche direkt sehen kann – ohne Mauern, Höhenversatz oder entfernten Poolbereich.')}${fact('Außenküche', finca.outdoorKitchen)}${fact('Grill', finca.barbecue)}
       </div></section>
       <section class="detail-section"><h3>Lage & Atmosphäre</h3><div class="fact-list">
         ${fact('Privatsphäre', finca.privacy)}${fact('Nachbarn', finca.neighbours)}${fact('Straßenlärm', finca.roadNoise)}${fact('Außenbereich', finca.outdoorArea)}${fact('Strand', finca.beachDistance)}${fact('Ort', finca.townDistance)}

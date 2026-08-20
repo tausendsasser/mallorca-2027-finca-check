@@ -79,7 +79,7 @@
       "bedrooms": 3, "bathrooms": 2, "beds": 6, "bedConfiguration": "2 Zimmer mit je 2 Einzelbetten + 1 Doppelbett",
       "sleepingCapacity": "6 Schlafplätze – passend für unsere Gruppe.",
       "sleepingConsiderations": "Zwei Zweibettzimmer und ein Doppelzimmer bieten eine klare, familienfreundliche Verteilung.",
-      "pool": { "length": null, "width": null, "area": null, "display": "Groß, Maße offen", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "pool": { "length": 8, "width": 4, "area": 32, "display": "8 × 4 m", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "Größe gut; Tiefe prüfen" },
       "airConditioning": "prüfen", "washingMachine": "prüfen", "privacy": "Sehr ruhig und privat laut Bewertungen", "neighbours": "unknown", "roadNoise": "Sehr ruhig",
       "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
       "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": ["Ruhe und Privatsphäre"], "reviewNegatives": [],
