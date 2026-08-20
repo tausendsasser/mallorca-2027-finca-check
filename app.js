@@ -6,8 +6,22 @@ const state = {
   favorites: new Set(JSON.parse(localStorage.getItem('finca-favorites') || '[]')),
   localRatings: JSON.parse(localStorage.getItem('finca-ratings') || '{}'),
   quickRatings: JSON.parse(localStorage.getItem('finca-quick-ratings') || '{}'),
+  pendingRatings: [],
+  selectedPerson: localStorage.getItem('finca-selected-person') || 'Marcel',
+  syncStatus: 'Verbindung wird hergestellt …',
   personalNotes: JSON.parse(localStorage.getItem('finca-personal-notes') || '{}')
 };
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBeOU8wrUFrXr_tVx_fe5CxXYzSlyTPSbU',
+  authDomain: 'mallorca-2027-finca-check.firebaseapp.com',
+  projectId: 'mallorca-2027-finca-check',
+  storageBucket: 'mallorca-2027-finca-check.firebasestorage.app',
+  messagingSenderId: '296027815503',
+  appId: '1:296027815503:web:a467fa59fcf4528f82b43a'
+};
+
+let firebase = null;
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -57,17 +71,16 @@ function quickRatingSummary(finca) {
 }
 
 function quickScoreControl(finca, context) {
-  const person = state.data.familyMembers[0];
-  const value = quickRating(finca, person) ?? 5;
+  const person = state.selectedPerson;
+  const value = quickRating(finca, person);
   const summary = quickRatingSummary(finca);
   return `<div class="quick-score" data-quick-score-box="${finca.id}" data-context="${context}">
     <div class="quick-score__head"><strong>Meine Bewertung</strong><span data-family-quick="${finca.id}">${summary.average ? `Familie ${summary.average.toFixed(1)} / 10` : 'Noch keine Familienwertung'}</span></div>
     <div class="quick-score__controls">
-      <select data-quick-person="${finca.id}" aria-label="Bewertende Person">${state.data.familyMembers.map(name => `<option value="${name}">${name}</option>`).join('')}</select>
-      <output data-quick-output="${finca.id}">${value}</output>
-      <input type="range" min="1" max="10" value="${value}" data-quick-rating="${finca.id}" aria-label="Schnelle Gesamtbewertung von 1 bis 10">
+      <label>Wer bewertet?<select data-quick-person="${finca.id}" aria-label="Bewertende Person">${state.data.familyMembers.map(name => `<option value="${name}" ${name === person ? 'selected' : ''}>${name}</option>`).join('')}</select></label>
+      <div class="score-buttons" role="group" aria-label="Bewertung von 1 bis 10">${Array.from({ length: 10 }, (_, index) => index + 1).map(score => `<button type="button" class="score-button ${value === score ? 'is-selected' : ''}" data-score-value="${score}" data-score-finca="${finca.id}" aria-pressed="${value === score}">${score}</button>`).join('')}</div>
     </div>
-    <div class="quick-scale" aria-hidden="true"><span>1</span><span>5</span><span>10</span></div>
+    <p class="sync-status ${state.syncStatus.startsWith('Online') ? 'is-online' : ''}" data-sync-status>${state.syncStatus}</p>
   </div>`;
 }
 
@@ -252,24 +265,89 @@ function personalNotesPanel(finca) {
     <p class="local-note">Notizen werden in Version 1 nur auf diesem Gerät gespeichert.</p></div>`;
 }
 
-function saveQuickRating(id, person, value) {
+async function saveQuickRating(id, person, value) {
   state.quickRatings[id] ||= {};
   state.quickRatings[id][person] = Number(value);
   localStorage.setItem('finca-quick-ratings', JSON.stringify(state.quickRatings));
-  const finca = state.data.fincas.find(item => item.id === id);
-  syncQuickScoreControls(finca, person);
-  renderComparison();
+  render();
+  if (!firebase) {
+    state.pendingRatings.push({ id, person, score:Number(value) });
+    setSyncStatus('Verbindung wird hergestellt – Bewertung vorgemerkt');
+    return;
+  }
+  setSyncStatus('Wird gespeichert …');
+  try {
+    await firebase.setDoc(firebase.doc(firebase.db, 'ratings', ratingDocumentId(id, person)), {
+      fincaId: id,
+      person,
+      score: Number(value),
+      updatedAt: firebase.serverTimestamp()
+    });
+    setSyncStatus('Online gespeichert ✓');
+  } catch (error) {
+    console.error(error);
+    setSyncStatus('Speichern fehlgeschlagen – bitte erneut versuchen');
+  }
 }
 
 function syncQuickScoreControls(finca, person) {
-  const value = quickRating(finca, person) ?? 5;
-  const summary = quickRatingSummary(finca);
-  $$(`[data-quick-score-box="${finca.id}"]`).forEach(box => {
-    $('[data-quick-person]', box).value = person;
-    $('[data-quick-rating]', box).value = value;
-    $('[data-quick-output]', box).value = value;
+  state.selectedPerson = person;
+  localStorage.setItem('finca-selected-person', person);
+  render();
+}
+
+function ratingDocumentId(fincaId, person) { return `${fincaId}--${person.toLowerCase()}`; }
+
+function setSyncStatus(message) {
+  state.syncStatus = message;
+  $$('[data-sync-status]').forEach(element => {
+    element.textContent = message;
+    element.classList.toggle('is-online', message.startsWith('Online'));
   });
-  $$(`[data-family-quick="${finca.id}"]`).forEach(label => label.textContent = summary.average ? `Familie ${summary.average.toFixed(1)} / 10` : 'Noch keine Familienwertung');
+}
+
+async function connectSharedRatings() {
+  try {
+    const [{ initializeApp }, authApi, firestoreApi] = await Promise.all([
+      import('https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js'),
+      import('https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js'),
+      import('https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js')
+    ]);
+    const app = initializeApp(firebaseConfig);
+    const auth = authApi.getAuth(app);
+    await authApi.signInAnonymously(auth);
+    const db = firestoreApi.getFirestore(app);
+    firebase = { db, ...firestoreApi };
+
+    const ratingsCollection = firestoreApi.collection(db, 'ratings');
+    const initial = await firestoreApi.getDocs(ratingsCollection);
+    state.quickRatings = {};
+    initial.forEach(snapshot => {
+      const rating = snapshot.data();
+      state.quickRatings[rating.fincaId] ||= {};
+      state.quickRatings[rating.fincaId][rating.person] = rating.score;
+    });
+    const pending = state.pendingRatings.splice(0);
+    await Promise.all(pending.map(rating => firestoreApi.setDoc(firestoreApi.doc(db, 'ratings', ratingDocumentId(rating.id, rating.person)), { fincaId:rating.id, person:rating.person, score:rating.score, updatedAt:firestoreApi.serverTimestamp() })));
+
+    firestoreApi.onSnapshot(ratingsCollection, snapshot => {
+      snapshot.docChanges().forEach(change => {
+        if (change.type === 'removed') return;
+        const rating = change.doc.data();
+        state.quickRatings[rating.fincaId] ||= {};
+        state.quickRatings[rating.fincaId][rating.person] = rating.score;
+      });
+      localStorage.setItem('finca-quick-ratings', JSON.stringify(state.quickRatings));
+      state.syncStatus = 'Online synchronisiert ✓';
+      render();
+    }, error => {
+      console.error(error);
+      setSyncStatus('Keine Online-Verbindung – lokale Anzeige aktiv');
+    });
+  } catch (error) {
+    console.error(error);
+    setSyncStatus('Keine Online-Verbindung – lokale Anzeige aktiv');
+  }
 }
 
 function savePersonalNote(finca) {
@@ -292,6 +370,8 @@ function populateFilters() {
 
 function setupEvents() {
   document.addEventListener('click', event => {
+    const scoreButton = event.target.closest('[data-score-value]');
+    if (scoreButton) { saveQuickRating(scoreButton.dataset.scoreFinca, state.selectedPerson, scoreButton.dataset.scoreValue); return; }
     const galleryButton = event.target.closest('[data-gallery-step]');
     if (galleryButton) { event.stopPropagation(); stepGallery(galleryButton.dataset.galleryId, Number(galleryButton.dataset.galleryStep), galleryButton.closest('.finca-image, .detail-hero')); return; }
     const detail = event.target.closest('[data-detail]');
@@ -321,12 +401,10 @@ function setupEvents() {
   $('#sort-select').addEventListener('change', e => { state.sort = e.target.value; render(); });
   document.addEventListener('input', e => {
     if (e.target.matches('[data-rating-criterion]')) e.target.closest('.rating-row').querySelector('output').value = e.target.value;
-    if (e.target.matches('[data-quick-rating]')) { const box = e.target.closest('[data-quick-score-box]'); $('[data-quick-output]', box).value = e.target.value; saveQuickRating(e.target.dataset.quickRating, $('[data-quick-person]', box).value, e.target.value); }
   });
   document.addEventListener('change', e => {
     if (e.target.id === 'rating-person') { const id = e.target.closest('#detail-content').querySelector('[data-save-rating]').dataset.saveRating; loadPersonRating(state.data.fincas.find(f => f.id === id), e.target.value); }
     if (e.target.matches('[data-quick-person]')) syncQuickScoreControls(state.data.fincas.find(f => f.id === e.target.dataset.quickPerson), e.target.value);
-    if (e.target.matches('[data-quick-rating]')) render();
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') $$('dialog[open]').forEach(dialog => dialog.close());
@@ -379,7 +457,7 @@ async function init() {
     const response = await fetch('data/fincas.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
-    renderTrip(); populateFilters(); setupEvents(); render();
+    renderTrip(); populateFilters(); setupEvents(); render(); connectSharedRatings();
   } catch (error) {
     $('#finca-grid').innerHTML = '<div class="note negative"><strong>Daten konnten nicht geladen werden.</strong><br>Bitte die App über GitHub Pages oder einen lokalen Webserver öffnen.</div>';
     console.error(error);
