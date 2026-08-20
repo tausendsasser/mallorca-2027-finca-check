@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-08-20",
+  "trip": {
+    "title": "Mallorca 2027 – Finca Check",
+    "windowStart": "2027-07-24",
+    "windowEnd": "2027-08-15",
+    "idealStart": "2027-07-28",
+    "idealEnd": "2027-08-11",
+    "nights": 14,
+    "adults": 4,
+    "children": 2,
+    "preferredRegions": ["Nordost", "Nord", "Nord / Nordwest"]
+  },
+  "familyMembers": ["Marcel", "Alina", "Opi", "Oma", "Milia", "Malea"],
+  "ratingRules": { "scaleMin": 1, "scaleMax": 10, "mustCriteriaScoreCap": 5 },
+  "ratingCriteria": [
+    { "id": "sleeping", "label": "Schlafsituation", "weight": 0.20, "required": true, "minimum": 5 },
+    { "id": "privacy", "label": "Ruhe & Alleinlage", "weight": 0.15, "required": true, "minimum": 5 },
+    { "id": "socialPool", "label": "Terrasse → Pool / Geselligkeit", "weight": 0.15, "required": false, "minimum": null },
+    { "id": "pool", "label": "Pool", "weight": 0.15, "required": false, "minimum": null },
+    { "id": "region", "label": "Region / Insellage", "weight": 0.10, "required": false, "minimum": null },
+    { "id": "outdoor", "label": "Außenbereich / Atmosphäre", "weight": 0.10, "required": false, "minimum": null },
+    { "id": "climate", "label": "Klimakomfort", "weight": 0.05, "required": false, "minimum": null },
+    { "id": "value", "label": "Preis-Leistung", "weight": 0.05, "required": false, "minimum": null },
+    { "id": "gutFeeling", "label": "Bauchgefühl", "weight": 0.05, "required": false, "minimum": null }
+  ],
+  "fincas": [
+    {
+      "id": "can-salat-de-tiraset",
+      "name": "Can Salat de Tiraset",
+      "status": "active",
+      "provider": "Fincallorca",
+      "listingUrl": "https://www.fincallorca.de/ferienhaeuser/can-salat-de-tiraset-llubi-emf402",
+      "location": "Llubí", "region": "Nord / nördliche Mitte", "islandArea": "Nord",
+      "price": 6362, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 4, "beds": 8,
+      "bedConfiguration": "8 Schlafplätze; Kinderlösung/Etagenbett ungünstiger, offenen Schlafbereich prüfen",
+      "pool": { "length": null, "width": null, "area": 66, "display": "66 m²", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "airConditioning": "Ja, gegen Aufpreis", "washingMachine": "Ja", "privacy": "unknown", "neighbours": "unknown", "roadNoise": "Straßennähe prüfen",
+      "outdoorArea": "Großer Pool", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Sehr großer Pool"], "personalNegatives": ["Schlaflösung eher ein Minus"], "memoryAnchor": "Der 66-m²-Pool", 
+      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "short-de-carrossa", "name": "S’Hort de Carrossa", "status": "active", "provider": "Fincallorca", "listingUrl": "https://www.fincallorca.de/ferienhaeuser/short-de-carrossa-arta-emf658",
+      "location": "Artà", "region": "Nordost", "islandArea": "Nordost", "price": 6036, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 3, "bathrooms": 2, "beds": 4, "bedConfiguration": "2 Doppelzimmer + 1 Zimmer mit 2 Einzelbetten",
+      "pool": { "length": 8, "width": 4, "area": 32, "display": "8 × 4 m", "minDepth": 1.1, "maxDepth": 1.8, "saltwater": null, "jumpingAssessment": "Gut nutzbar; vor Ort prüfen" },
+      "airConditioning": "Ja", "washingMachine": "prüfen", "privacy": "Sehr privat; langer Privatweg", "neighbours": "Kaum sichtbar", "roadNoise": "Ruhig",
+      "outdoorArea": "Großes, privates Grundstück", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Gut, Poolbereich aber erhöht", "poolVisibility": "Teilweise", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Tolles Grundstück", "Sehr privat"], "personalNegatives": ["Edelstahlzaun am Pool stört optisch"], "memoryAnchor": "Der lange Privatweg",
+      "availability": { "summary": "20.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "es-fetget", "name": "Es Fetget", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6119251",
+      "location": "Son Servera", "region": "Nordost", "islandArea": "Nordost", "price": 7174, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 3, "bathrooms": 2, "beds": 5, "bedConfiguration": "2 Zimmer mit je 2 Einzelbetten + 1 Doppelbett",
+      "pool": { "length": null, "width": null, "area": null, "display": "Groß, Maße offen", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "airConditioning": "prüfen", "washingMachine": "prüfen", "privacy": "Sehr ruhig und privat laut Bewertungen", "neighbours": "unknown", "roadNoise": "Sehr ruhig",
+      "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": ["Ruhe und Privatsphäre"], "reviewNegatives": [],
+      "personalPositives": ["Starker Kandidat"], "personalNegatives": ["Vergleichsweise teuer"], "memoryAnchor": "Der ruhige Nordosten",
+      "availability": { "summary": "Juli/August komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "ses-conies", "name": "Ses Conies", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p2724304",
+      "location": "Manacor", "region": "Ost / Nordost-Tendenz", "islandArea": "Ost", "price": 7157, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": 7, "bedConfiguration": "6 Einzelbetten + 1 Kingsize; separates Zimmer im Anbau",
+      "pool": { "length": 10, "width": 5, "area": 50, "display": "10 × 5 m", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "Größe sehr gut; Tiefe prüfen" },
+      "airConditioning": "Teilweise / prüfen", "washingMachine": "prüfen", "privacy": "Gut", "neighbours": "unknown", "roadNoise": "unknown",
+      "outdoorArea": "Schöner Außenbereich", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Stark", "poolVisibility": "Gut", "outdoorKitchen": "Ja", "barbecue": "Ja",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Außenküche und Poolbereich stark", "Gute Bettenflexibilität"], "personalNegatives": [], "memoryAnchor": "Die Außenküche am großen Pool",
+      "availability": { "summary": "Ab 26.07. bis Ende August frei", "intervals": [{ "start": "2027-07-24", "end": "2027-07-25", "state": "unavailable" }, { "start": "2027-07-26", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "cabrer-canet", "name": "Cabrer Canet", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p11747066",
+      "location": "Canyamel / Capdepera", "region": "Nordost", "islandArea": "Nordost", "price": 6685, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": 6, "bedConfiguration": "4 Einzelbetten + 2 Doppelbetten",
+      "pool": { "length": 7, "width": 3.5, "area": 24.5, "display": "7 × 3,5 m", "minDepth": 1.65, "maxDepth": 1.65, "saltwater": null, "jumpingAssessment": "Relativ klein, aber ausreichend tief" },
+      "airConditioning": "Keine erkennbar", "washingMachine": "prüfen", "privacy": "Gut", "neighbours": "unknown", "roadNoise": "unknown",
+      "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Gute Lage"], "personalNegatives": ["Pool eher klein", "Keine Klimaanlage erkennbar"], "memoryAnchor": "Canyamel und der tiefe Pool",
+      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "sa-terra-grosa", "name": "Sa Terra Grosa", "status": "active", "provider": "Fincallorca", "listingUrl": "https://www.fincallorca.de/ferienhaeuser/sa-terra-grosa-binissalem-emf697",
+      "location": "Binissalem", "region": "Zentral / westliche Mitte", "islandArea": "Zentral", "price": null, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 2, "beds": null, "bedConfiguration": "Etagen gut trennbar; unten Doppel + 2 Einzel, oben flexibel",
+      "pool": { "length": null, "width": null, "area": 40, "display": "40 m²", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "airConditioning": "Ja", "washingMachine": "prüfen", "privacy": "Nachbar ca. 80 m; Straße möglich", "neighbours": "Ca. 80 m entfernt", "roadNoise": "Möglich; prüfen",
+      "outdoorArea": "Garten wirkt eher trist", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Gut", "poolVisibility": "Gut", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Starke Schlafaufteilung"], "personalNegatives": ["Garten wirkt trist", "Nachbar sichtbar"], "memoryAnchor": "Die gute Aufteilung über zwei Etagen",
+      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "sort-nova-villa", "name": "Sort Nova Villa", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1949105",
+      "location": "Montuïri", "region": "Zentral", "islandArea": "Zentral", "price": 4071, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": null, "bedConfiguration": "Mehrere Einzel- und Doppelbetten; sehr flexibel",
+      "pool": { "length": 10, "width": 5, "area": 50, "display": "10 × 5 m", "minDepth": 1.5, "maxDepth": 2.5, "saltwater": null, "jumpingAssessment": "Sehr gut: groß und tief" },
+      "airConditioning": "Ja, in Schlafräumen", "washingMachine": "prüfen", "privacy": "Nachbarhunde erwähnt", "neighbours": "Hunde hörbar", "roadNoise": "Ma-15 hörbar",
+      "outdoorArea": "Schön und großzügig", "coveredTerrace": "Ja", "kitchenToTerrace": "Gut", "terraceToPool": "Sehr gut", "poolVisibility": "Sehr gut", "outdoorKitchen": "unknown", "barbecue": "Ja",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": ["Straße und Nachbarhunde erwähnt"],
+      "personalPositives": ["Günstig", "Tiefer Pool", "Schöner Außenbereich"], "personalNegatives": ["Ma-15 hörbar"], "memoryAnchor": "Der 2,50 m tiefe Pool",
+      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "casa-son-bordoi", "name": "Casa Son Bordoi", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6516102",
+      "location": "Llubí", "region": "Nord / nördliche Mitte", "islandArea": "Nord", "price": 6883, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": 6, "bedConfiguration": "5 Einzelbetten + 1 Kingsize",
+      "pool": { "length": null, "width": null, "area": null, "display": "Lang und schmal; Maße offen", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "airConditioning": "prüfen", "washingMachine": "prüfen", "privacy": "Kompakter und ortsnah", "neighbours": "unknown", "roadNoise": "unknown",
+      "outdoorArea": "Modern", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": ["Sehr gute Bewertungen"], "reviewNegatives": [],
+      "personalPositives": ["Modern", "Sehr gute Bewertungen"], "personalNegatives": ["Weniger abgeschieden"], "memoryAnchor": "Das moderne Haus in Llubí",
+      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "son-matginet-18", "name": "Son Matginet 18", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p8098944",
+      "location": "Sineu", "region": "Zentral", "islandArea": "Zentral", "price": 5727, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 3, "bathrooms": 3, "beds": 6, "bedConfiguration": "6 Einzelbetten; zusätzlich Gäste-WC",
+      "pool": { "length": 10, "width": 4, "area": 40, "display": "10 × 4 m", "minDepth": 0.8, "maxDepth": 1.8, "saltwater": null, "jumpingAssessment": "Gute Größe und ausreichende Tiefe" },
+      "airConditioning": "Teilweise", "washingMachine": "Ja", "privacy": "Gut; ortsnah", "neighbours": "unknown", "roadNoise": "unknown",
+      "outdoorArea": "Großer Grill- und Außenbereich", "coveredTerrace": "Ja", "kitchenToTerrace": "unknown", "terraceToPool": "Gut", "poolVisibility": "Gut", "outdoorKitchen": "unknown", "barbecue": "Ja",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Gutes Preis-Leistungs-Paket", "Großer Grillbereich"], "personalNegatives": [], "memoryAnchor": "Sechs Einzelbetten und der Grillbereich",
+      "availability": { "summary": "Relevantes Urlaubsfenster komplett frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "finca-salord", "name": "Finca Salord", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p8638268",
+      "location": "Muro", "region": "Nord", "islandArea": "Nord", "price": 5525, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": null, "bedConfiguration": "Sehr flexibel; zusätzlich Gäste-WC",
+      "pool": { "length": null, "width": null, "area": null, "display": "Großer Salzwasserpool", "minDepth": null, "maxDepth": null, "saltwater": true, "jumpingAssessment": "Maße und Tiefe prüfen" },
+      "airConditioning": "Ja", "washingMachine": "prüfen", "privacy": "Sehr privat, ca. 38.000 m²", "neighbours": "Kaum sichtbar", "roadNoise": "Ruhig",
+      "outdoorArea": "Sehr großes privates Grundstück", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "prüfen", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Starkes Gesamtpaket", "Extrem privat", "Salzwasserpool"], "personalNegatives": [], "memoryAnchor": "38.000 m² Privatsphäre",
+      "availability": { "summary": "24.07.–14.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-14", "state": "available" }, { "start": "2027-08-15", "end": "2027-08-15", "state": "unavailable" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "son-morey-tarongers-108", "name": "Son Morey Tarongers 108", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p2592734",
+      "location": "Muro", "region": "Nord", "islandArea": "Nord", "price": 6115, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 3, "beds": null, "bedConfiguration": "prüfen",
+      "pool": { "length": null, "width": null, "area": null, "display": "Besondere Form; Maße offen", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "unknown" },
+      "airConditioning": "prüfen", "washingMachine": "prüfen", "privacy": "Gut", "neighbours": "unknown", "roadNoise": "unknown",
+      "outdoorArea": "Palmen und Naturstein; sehr schön integriert", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "Sehr schön integriert", "poolVisibility": "Gut", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Palmen und Naturstein sehr schön", "Pool wirkt gut integriert"], "personalNegatives": ["Fenstergitter stören"], "memoryAnchor": "Palmen, Naturstein und der organische Pool",
+      "availability": { "summary": "24.07.–15.08. frei", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "available" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "els-casals", "name": "Els Casals", "status": "active", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p897166",
+      "location": "Pollença", "region": "Nord / Nordwest", "islandArea": "Nordwest", "price": 6544, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": 4, "bathrooms": 4, "beds": 7, "bedConfiguration": "1 Doppelzimmer + 3 Zimmer mit je 2 Einzelbetten",
+      "pool": { "length": null, "width": null, "area": null, "display": "Eher klein; Maße offen", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "Größe und Tiefe prüfen" },
+      "airConditioning": "Ja, nachts / Zeiten prüfen", "washingMachine": "Ja", "privacy": "Sehr ruhig und abgeschieden", "neighbours": "Kaum sichtbar", "roadNoise": "Sehr ruhig",
+      "outdoorArea": "Rustikal und ruhig", "coveredTerrace": "Ja", "kitchenToTerrace": "Gut", "terraceToPool": "Sehr gut", "poolVisibility": "Sehr gut", "outdoorKitchen": "unknown", "barbecue": "Ja",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": [],
+      "personalPositives": ["Starke Ruhe", "Sehr gute Terrasse-Pool-Verbindung"], "personalNegatives": ["Rustikal", "Pool eher klein"], "memoryAnchor": "Die abgeschiedene Terrasse bei Pollença",
+      "availability": { "summary": "Offen", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    },
+    {
+      "id": "ses-velletes-7", "name": "Ses Velletes 7", "status": "excluded", "provider": "FeWo-direkt", "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p10023975",
+      "location": "Artà", "region": "Nordost", "islandArea": "Nordost", "price": 6685, "currency": "EUR", "nights": 14, "adults": 4, "children": 2,
+      "bedrooms": null, "bathrooms": null, "beds": null, "bedConfiguration": "unknown",
+      "pool": { "length": null, "width": null, "area": null, "display": "Eher klein und flach", "minDepth": null, "maxDepth": null, "saltwater": null, "jumpingAssessment": "Für Springen und Toben eher ungeeignet" },
+      "airConditioning": "Nein", "washingMachine": "unknown", "privacy": "Eigentümerhaus nah", "neighbours": "Eigentümerhaus auf dem Grundstück", "roadNoise": "unknown",
+      "outdoorArea": "unknown", "coveredTerrace": "unknown", "kitchenToTerrace": "unknown", "terraceToPool": "unknown", "poolVisibility": "unknown", "outdoorKitchen": "unknown", "barbecue": "unknown",
+      "beachDistance": null, "townDistance": null, "restaurantDistance": null, "externalRating": null, "reviewCount": null, "reviewPositives": [], "reviewNegatives": ["Hunde in älterer Bewertung erwähnt"],
+      "personalPositives": [], "personalNegatives": ["Pool eher klein und flach", "Keine Klimaanlage", "Eigentümerhaus nah"], "memoryAnchor": "Bewusst ausgeschlossen – nicht erneut aufnehmen",
+      "availability": { "summary": "Nicht mehr relevant", "intervals": [{ "start": "2027-07-24", "end": "2027-08-15", "state": "unknown" }] }, "images": [], "familyRatings": {}
+    }
+  ]
+}
