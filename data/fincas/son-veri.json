@@ -1,0 +1,72 @@
+{
+  "id": "son-veri",
+  "quickRatings": {},
+  "name": "22 · Finca Son Veri",
+  "status": "active",
+  "provider": "LifestyleFincas",
+  "priceSource": "LifestyleFincas",
+  "listingUrl": "https://www.lifestylefincas.com/finca/finca-son-veri/",
+  "location": "Pòrtol / Santa Maria",
+  "region": "Zentral / Palma-Nähe",
+  "islandArea": "Zentral",
+  "price": 7770,
+  "currency": "EUR",
+  "priceNote": "555 € pro Nacht × 14 Nächte; Verfügbarkeit laut Nutzer bestätigt",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 4,
+  "beds": 4,
+  "bedConfiguration": "4 Doppelbetten: 2 × 160×200 cm und 2 × 180×200 cm; 2 Schlafzimmer im Haupthaus + 2 separate Apartments",
+  "sleepingCapacity": "Bis 8 Personen; für sechs Personen viel Platz und vier eigene Bäder.",
+  "sleepingConsiderations": "Nur Doppelbetten, keine Einzelbetten. Die zwei separaten Apartments bieten viel Privatsphäre, können für die Familienaufteilung aber auch weniger gemeinschaftlich wirken.",
+  "pool": {
+    "length": 20,
+    "width": 4,
+    "area": 80,
+    "display": "20 × 4 m XXL-Pool",
+    "minDepth": 1.4,
+    "maxDepth": 1.8,
+    "saltwater": false,
+    "jumpingAssessment": "Außergewöhnlich großer Pool und fürs Toben sehr stark; mit 1,40–1,80 m Tiefe Sprungstelle und sichere Wassertiefe vor Ort prüfen."
+  },
+  "airConditioning": "Ja, in allen Schlafzimmern; nach Verbrauch berechnet",
+  "washingMachine": "Ja",
+  "privacy": "Großes Grundstück mit ca. 17.000 m²; Privatsphäre wirkt hoch",
+  "neighbours": "noch genauer prüfen",
+  "roadNoise": "noch genauer prüfen",
+  "outdoorArea": "Ca. 17.000 m² Grundstück, XXL-Pool, große Terrasse, Pool-Lounge mit Daybed und Tramuntana-Blick",
+  "coveredTerrace": "Ja – großer überdachter Lounge-Bereich am Pool",
+  "kitchenToTerrace": "Gemeinschaftsküche im Haupthaus; genaue Wegebeziehung prüfen",
+  "terraceToPool": "Sehr gut – großer Lounge-Bereich direkt am Pool",
+  "poolVisibility": "Sehr gut vom Lounge-Bereich; vom Essbereich genauer prüfen",
+  "outdoorKitchen": "Nein / nicht angegeben",
+  "barbecue": "Ja – mobiler Gasgrill",
+  "personalPositives": [
+    "Extrem großer 20 × 4 m Pool",
+    "80 m² Wasserfläche",
+    "Großer überdachter Lounge-Bereich direkt am Pool",
+    "4 Schlafzimmer und 4 Bäder",
+    "Klimaanlage in allen Schlafzimmern",
+    "Waschmaschine",
+    "17.000 m² Grundstück",
+    "Zwei separate Apartments bieten zusätzliche Privatsphäre"
+  ],
+  "personalNegatives": [
+    "Mit ca. 7.770 € deutlich über unserer bisherigen 6.500-€-Orientierung",
+    "Nur Doppelbetten – keine Einzelbetten",
+    "Klimaanlage wird nach Verbrauch zusätzlich berechnet",
+    "Nachbarn und Straßenlärm noch genauer prüfen"
+  ],
+  "memoryAnchor": "Die mit dem riesigen 20×4-m-Pool und den zwei separaten Apartments",
+  "ourImpression": "Der 20 m lange Pool ist ein echtes Alleinstellungsmerkmal und für unser gemeinsames Poolleben extrem stark. Dazu kommen vier Bäder, Klima und ein großer überdachter Lounge-Bereich direkt am Pool. Gegen sie sprechen vor allem der hohe Preis und die reine Doppelbett-Aufteilung.",
+  "availability": {
+    "summary": "Für den gewünschten Zeitraum laut Nutzer frei; 555 € pro Nacht",
+    "intervals": [
+      { "start": "2027-07-28", "end": "2027-08-11", "state": "available" }
+    ]
+  },
+  "images": [],
+  "familyRatings": {}
+}
