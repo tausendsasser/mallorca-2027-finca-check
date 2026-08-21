@@ -38,6 +38,11 @@
   "memoryAnchor": "Die mit dem 9×4-m-Pool bis 1,90 m, den flexibel trennbaren Betten und dem riesigen Grundstück",
   "ourImpression": "Sehr ausgewogener Kandidat für uns: großer und ausreichend tiefer Pool, flexible Schlafsituation, direkter Terrassenzugang aus der Küche und viel Privatsphäre. Mit 6.300 € liegt sie noch in unserer bisherigen Preisorientierung.",
   "availability": {"summary":"28.07.–11.08.2027 laut Buchungslink/Preisangabe verfügbar","intervals":[{"start":"2027-07-28","end":"2027-08-11","state":"available"}]},
-  "images": [],
+  "images": [
+    {
+      "url": "https://www.auf-nach-mallorca.info/cdn/img/31851/cJABTqkJ6-UOth3zJtDOd2lAzs8%3D/338x190/finca_sesquerda_bei_sant_llorenc_mit_beheizbarem_pool.jpeg",
+      "alt": "Finca S'Esquerda bei Sant Llorenc"
+    }
+  ],
   "familyRatings": {}
 }
