@@ -3,13 +3,22 @@
   "quickRatings": {},
   "name": "2 · S’Hort de Carrossa",
   "status": "active",
-  "provider": "Fincallorca",
-  "listingUrl": "https://www.fincallorca.de/ferienhaeuser/short-de-carrossa-arta-emf658",
+  "provider": "Ralfs Fincas",
+  "listingUrl": "https://www.ralfsfincas.de/129/finca-short-de-carrossa?start=2027-07-28&end=2027-08-11",
   "location": "Artà",
   "region": "Nordost",
   "islandArea": "Nordost",
-  "price": 6036,
+  "price": 5586,
   "currency": "EUR",
+  "priceNote": "5.586 € bei Ralfs Fincas für 28.07.–11.08.2027; Vergleich: 6.036 € bei Fincallorca",
+  "alternativeOffers": [
+    {
+      "provider": "Fincallorca",
+      "price": 6036,
+      "currency": "EUR",
+      "listingUrl": "https://www.fincallorca.de/ferienhaeuser/short-de-carrossa-arta-emf658"
+    }
+  ],
   "nights": 14,
   "adults": 4,
   "children": 2,
@@ -50,13 +59,14 @@
   "reviewNegatives": [],
   "personalPositives": [
     "Tolles Grundstück",
-    "Sehr privat"
+    "Sehr privat",
+    "Bei Ralfs Fincas deutlich günstiger als bei Fincallorca"
   ],
   "personalNegatives": [
     "Edelstahlzaun am Pool stört optisch"
   ],
   "memoryAnchor": "Der lange Privatweg",
-  "ourImpression": "Das Grundstück wirkt sehr schön, weitläufig und privat. Die Schlafaufteilung passt grundsätzlich gut für uns. Marcel stört allerdings der erhöhte Poolbereich mit dem Edelstahlzaun, weil der Pool dadurch etwas weniger idyllisch wirkt als der Rest des Grundstücks.",
+  "ourImpression": "Das Grundstück wirkt sehr schön, weitläufig und privat. Die Schlafaufteilung passt grundsätzlich gut für uns. Der erhöhte Poolbereich mit dem Edelstahlzaun wirkt etwas weniger idyllisch als der Rest des Grundstücks. Preislich ist das Haus über Ralfs Fincas mit 5.586 € aktuell deutlich interessanter als über Fincallorca mit 6.036 €.",
   "availability": {
     "summary": "20.07. bis Ende August frei",
     "intervals": [
@@ -87,4 +97,3 @@
   ],
   "familyRatings": {}
 }
-
