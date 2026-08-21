@@ -1,0 +1,1 @@
+Candidate data intentionally leaves unknown fields open rather than guessing.
