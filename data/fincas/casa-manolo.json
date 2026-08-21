@@ -10,7 +10,8 @@
   "islandArea": "Nordost",
   "price": 6244,
   "currency": "EUR",
-  "priceNote": "Vorläufig 446 € × 14 Nächte; Gesamtpreis final bestätigen",
+  "priceNote": "Ralfs Fincas: vorläufig 446 € × 14 Nächte = 6.244 €; alternative Anbieterangabe laut Nutzer: 7.700 € bei Finca Yorker",
+  "alternativePrices": [{"provider":"Finca Yorker","price":7700,"currency":"EUR","note":"Preisangabe laut Nutzer"}],
   "nights": 14,
   "adults": 4,
   "children": 2,
@@ -19,60 +20,24 @@
   "bedConfiguration": "1 Doppelzimmer + 2 Schlafzimmer mit jeweils 2 Einzelbetten",
   "sleepingCapacity": "Sehr flexible Aufteilung für unsere Gruppe.",
   "sleepingConsiderations": "Vier Einzelbetten sind besonders praktisch für Kinder und Großeltern.",
-  "pool": {
-    "length": 10,
-    "width": 5,
-    "area": 50,
-    "display": "10 × 5 m Salzwasserpool",
-    "minDepth": 1.2,
-    "maxDepth": 1.9,
-    "saltwater": true,
-    "jumpingAssessment": "Sehr großer Pool; geeignete Sprungstelle vor Ort prüfen."
-  },
-  "airConditioning": "Ja, in allen Schlafzimmern",
+  "pool": {"length":10,"width":5,"area":50,"display":"10 × 5 m Salzwasserpool","minDepth":1.2,"maxDepth":1.9,"saltwater":true,"jumpingAssessment":"Sehr großer, abfallender Pool; geeignete Sprungstelle vor Ort prüfen."},
+  "airConditioning": "Ja – Klimaanlage im Wohnzimmer und in allen 3 Schlafzimmern",
   "washingMachine": "Ja",
-  "privacy": "Großes Grundstück, ruhig und privat",
+  "privacy": "15.000 m² Grundstück; sehr ruhig und privat beschrieben",
   "neighbours": "Nächster Nachbar ca. 60 m entfernt",
-  "roadNoise": "Ruhige Lage beschrieben",
+  "roadNoise": "Kein relevanter Straßenlärm erkennbar; Anbieter beschreibt die Lage als ruhig und ländlich, Gästebewertungen bestätigen eine sehr ruhige Umgebung",
   "outdoorArea": "Ca. 15.000 m² mit Pool, Jacuzzi und großzügigem Außenbereich",
   "coveredTerrace": "Ja",
   "kitchenToTerrace": "prüfen",
   "terraceToPool": "Sehr gut – überdachte Terrasse und Außenküche am Poolbereich",
   "poolVisibility": "Gut",
   "outdoorKitchen": "Ja",
-  "barbecue": "Ja",
-  "personalPositives": [
-    "10 × 5 m Salzwasserpool",
-    "Pool bis 1,90 m tief",
-    "Überdachte Terrasse und Außenküche",
-    "Vier Einzelbetten",
-    "3 Badezimmer",
-    "Klimaanlage",
-    "Waschmaschine",
-    "Jacuzzi",
-    "Nordostlage bei Artà"
-  ],
-  "personalNegatives": [
-    "Nachbar ca. 60 m entfernt",
-    "Gesamtpreis final bestätigen"
-  ],
-  "memoryAnchor": "Die bei Artà mit dem großen 10×5-m-Salzwasserpool, Jacuzzi und Außenküche",
-  "ourImpression": "Sehr starker Kandidat: großer Pool, geselliger Außenbereich und besonders gute Schlafaufteilung.",
-  "availability": {
-    "summary": "28.07.–11.08.2027; final bestätigen",
-    "intervals": [
-      {
-        "start": "2027-07-28",
-        "end": "2027-08-11",
-        "state": "check"
-      }
-    ]
-  },
-  "images": [
-    {
-      "url": "assets/fincas/20-casa-manolo.jpg",
-      "alt": "Casa Manolo mit großem Pool und Berglandschaft aus der Luft"
-    }
-  ],
+  "barbecue": "Ja – fester Grillplatz",
+  "personalPositives": ["10 × 5 m Salzwasserpool","Pool bis 1,90 m tief","Überdachte Terrasse und Außenküche","Vier Einzelbetten","3 Badezimmer","Klimaanlage im Wohnzimmer und allen 3 Schlafzimmern","Waschmaschine","Jacuzzi","Sehr ruhige, private Lage","Nordostlage bei Artà"],
+  "personalNegatives": ["Nachbar ca. 60 m entfernt","Klimaanlage wird bei Ralfs Fincas nach Verbrauch zusätzlich berechnet"],
+  "memoryAnchor": "Die bei Artà mit dem großen 10×5-m-Salzwasserpool, Jacuzzi, Außenküche und Klimaanlage überall",
+  "ourImpression": "Sehr starker Kandidat: macht insgesamt einen guten Eindruck, hat einen großen Pool, einen geselligen Außenbereich und eine besonders gute Schlafaufteilung. Ein großer Pluspunkt ist die vollständige Klimatisierung: Klimaanlage im Wohnzimmer und in allen drei Schlafzimmern. Auch die ruhige, private Lage wird durch Anbieterangaben und Gästebewertungen gestützt.",
+  "availability": {"summary":"28.07.–11.08.2027; final bestätigen","intervals":[{"start":"2027-07-28","end":"2027-08-11","state":"check"}]},
+  "images": [{"url":"assets/fincas/20-casa-manolo.jpg","alt":"Casa Manolo mit großem Pool und Berglandschaft aus der Luft"}],
   "familyRatings": {}
 }
