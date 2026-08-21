@@ -34,6 +34,15 @@
       .slice(0, 3);
   }
 
+  function scrollToFinca(id) {
+    const trigger = document.querySelector(`[data-detail="${CSS.escape(id)}"]`);
+    const card = trigger?.closest('.finca-card');
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('is-jump-highlight');
+    setTimeout(() => card.classList.remove('is-jump-highlight'), 1400);
+  }
+
   function renderActivitySummary() {
     const box = document.getElementById('spotlight');
     if (!box || !state.data) return;
@@ -50,20 +59,9 @@
 
     box.hidden = false;
     box.classList.add('rating-activity');
-    box.innerHTML = `
-      <div class="rating-activity__head">
-        <p class="eyebrow">Unsere Bewertungen</p>
-        <h3>Wer mag welche Finca am meisten?</h3>
-      </div>
-      <div class="rating-activity__people">
-        ${people.map(({ person, top }) => `
-          <div class="rating-activity__person">
-            <strong>${person}</strong>
-            <div class="rating-activity__scores">
-              ${top.map(({ finca, score }, index) => `<span class="rating-activity__score ${index === 0 ? 'is-top' : ''}"><b>Nr. ${fincaNumber(finca)}</b> ${score.toFixed(1)}</span>`).join('')}
-            </div>
-          </div>`).join('')}
-      </div>`;
+    box.innerHTML = people.map(({ person, top }) => `
+      <p class="rating-activity__line"><strong>${person}</strong>: ${top.map(({ finca, score }) => `<button type="button" class="rating-activity__link" data-jump-finca="${finca.id}">Nr. ${fincaNumber(finca)} · ${score.toFixed(1)}</button>`).join(' · ')}</p>
+    `).join('');
   }
 
   function cleanupFilters() {
@@ -99,18 +97,24 @@
     renderActivitySummary();
   };
 
+  document.addEventListener('click', event => {
+    const jump = event.target.closest('[data-jump-finca]');
+    if (!jump) return;
+    event.preventDefault();
+    scrollToFinca(jump.dataset.jumpFinca);
+  });
+
   const style = document.createElement('style');
   style.textContent = `
-    .rating-activity{display:block;background:#fff;border-radius:22px;padding:18px 20px;margin:0 0 22px;box-shadow:0 10px 30px rgba(35,72,59,.08)}
-    .rating-activity__head h3{margin:.2rem 0 1rem;font-size:clamp(1.05rem,2.5vw,1.3rem)}
-    .rating-activity__people{display:grid;gap:10px}
-    .rating-activity__person{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(35,72,59,.1)}
-    .rating-activity__person:first-child{border-top:0}
-    .rating-activity__person>strong{min-width:74px}
-    .rating-activity__scores{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
-    .rating-activity__score{background:#f3f5f2;border-radius:999px;padding:6px 9px;font-size:.85rem;white-space:nowrap}
-    .rating-activity__score.is-top{background:#e5efe9}
-    @media(max-width:600px){.rating-activity__person{align-items:flex-start;flex-direction:column}.rating-activity__scores{justify-content:flex-start}}
+    [hidden]{display:none!important}
+    .sort-panel{margin:0 0 12px;padding:10px 12px;background:#fff;border-radius:14px;box-shadow:0 6px 18px rgba(35,72,59,.06)}
+    .sort-panel label{margin:0}
+    .rating-activity{display:block;background:transparent!important;border:0!important;border-radius:0!important;padding:2px 0 12px!important;margin:0 0 10px!important;box-shadow:none!important}
+    .rating-activity__line{margin:3px 0;font-size:.82rem;line-height:1.5;color:rgba(35,72,59,.78)}
+    .rating-activity__line strong{color:#23483b}
+    .rating-activity__link{appearance:none;border:0;background:none;padding:0;margin:0;color:#23483b;font:inherit;font-weight:600;text-decoration:underline;text-decoration-color:rgba(35,72,59,.25);text-underline-offset:2px;cursor:pointer}
+    .rating-activity__link:hover{text-decoration-color:#23483b}
+    .finca-card.is-jump-highlight{outline:3px solid rgba(35,72,59,.22);outline-offset:4px;transition:outline-color .25s ease}
   `;
   document.head.appendChild(style);
 
