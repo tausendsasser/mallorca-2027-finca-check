@@ -75,6 +75,11 @@
       }
     ]
   },
-  "images": [],
+  "images": [
+    {
+      "url": "assets/fincas/16-ses-velletes.jpg",
+      "alt": "Ses Velletes mit Natursteinhaus, Garten und Pool aus der Luft"
+    }
+  ],
   "familyRatings": {}
 }

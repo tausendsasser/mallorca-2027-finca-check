@@ -1,3 +1,73 @@
 {
-  "id":"bestfewo-59733592","quickRatings":{},"name":"19 · BestFewo 59733592","status":"active","provider":"BestFewo","listingUrl":"https://www.bestfewo.de/d/59733592","location":"Mallorca – genauer Ort noch prüfen","region":"noch prüfen","islandArea":"noch prüfen","price":4093,"currency":"EUR","priceNote":"Frühbucherpreis für 28.07.–11.08.2027","nights":14,"adults":4,"children":2,"bedrooms":4,"bathrooms":null,"bedConfiguration":"noch prüfen","sleepingCapacity":"Mindestens 4 Schlafzimmer laut Suchfilter.","sleepingConsiderations":"Bettenaufteilung noch nicht verifiziert.","pool":{"length":null,"width":null,"area":null,"display":"Privater Pool – Maße offen","minDepth":null,"maxDepth":null,"saltwater":null,"jumpingAssessment":"Poolgröße und Tiefe noch prüfen."},"airConditioning":"Ja laut BestFewo-Suchfilter","washingMachine":"noch prüfen","privacy":"noch prüfen","neighbours":"noch prüfen","roadNoise":"noch prüfen","outdoorArea":"noch prüfen","coveredTerrace":"noch prüfen","kitchenToTerrace":"noch prüfen","terraceToPool":"noch prüfen","poolVisibility":"noch prüfen","outdoorKitchen":"noch prüfen","barbecue":"noch prüfen","personalPositives":["Extrem starker Frühbucherpreis","4 Schlafzimmer","Privater Pool","Klimaanlage"],"personalNegatives":["Objektname und genaue Lage noch nicht verifiziert","Weitere Details noch prüfen"],"memoryAnchor":"Der besonders günstige BestFewo-Kandidat für 4.093 €","ourImpression":"Preislich einer der auffälligsten Kandidaten; Qualitätsdetails werden erst nach eindeutiger Zuordnung ergänzt.","availability":{"summary":"BestFewo-Frühbucherangebot für 28.07.–11.08.2027","intervals":[{"start":"2027-07-28","end":"2027-08-11","state":"available"}]},"images":[],"familyRatings":{}
+  "id": "bestfewo-59733592",
+  "quickRatings": {},
+  "name": "19 · BestFewo 59733592",
+  "status": "active",
+  "provider": "BestFewo",
+  "listingUrl": "https://www.bestfewo.de/d/59733592",
+  "location": "Mallorca – genauer Ort noch prüfen",
+  "region": "noch prüfen",
+  "islandArea": "noch prüfen",
+  "price": 4093,
+  "currency": "EUR",
+  "priceNote": "Frühbucherpreis für 28.07.–11.08.2027",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": null,
+  "bedConfiguration": "noch prüfen",
+  "sleepingCapacity": "Mindestens 4 Schlafzimmer laut Suchfilter.",
+  "sleepingConsiderations": "Bettenaufteilung noch nicht verifiziert.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": null,
+    "display": "Privater Pool – Maße offen",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "Poolgröße und Tiefe noch prüfen."
+  },
+  "airConditioning": "Ja laut BestFewo-Suchfilter",
+  "washingMachine": "noch prüfen",
+  "privacy": "noch prüfen",
+  "neighbours": "noch prüfen",
+  "roadNoise": "noch prüfen",
+  "outdoorArea": "noch prüfen",
+  "coveredTerrace": "noch prüfen",
+  "kitchenToTerrace": "noch prüfen",
+  "terraceToPool": "noch prüfen",
+  "poolVisibility": "noch prüfen",
+  "outdoorKitchen": "noch prüfen",
+  "barbecue": "noch prüfen",
+  "personalPositives": [
+    "Extrem starker Frühbucherpreis",
+    "4 Schlafzimmer",
+    "Privater Pool",
+    "Klimaanlage"
+  ],
+  "personalNegatives": [
+    "Objektname und genaue Lage noch nicht verifiziert",
+    "Weitere Details noch prüfen"
+  ],
+  "memoryAnchor": "Der besonders günstige BestFewo-Kandidat für 4.093 €",
+  "ourImpression": "Preislich einer der auffälligsten Kandidaten; Qualitätsdetails werden erst nach eindeutiger Zuordnung ergänzt.",
+  "availability": {
+    "summary": "BestFewo-Frühbucherangebot für 28.07.–11.08.2027",
+    "intervals": [
+      {
+        "start": "2027-07-28",
+        "end": "2027-08-11",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "assets/fincas/19-bestfewo-59733592.jpg",
+      "alt": "Poolbereich von BestFewo 59733592"
+    }
+  ],
+  "familyRatings": {}
 }

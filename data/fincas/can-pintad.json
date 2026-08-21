@@ -47,18 +47,45 @@
   "restaurantDistance": null,
   "externalRating": null,
   "reviewCount": null,
-  "reviewPositives": ["Sehr private Lage", "Gute Ausstattung"],
-  "reviewNegatives": ["Je nach Wind kann Fluglärm hörbar sein"],
-  "personalPositives": ["Sehr private und ruhige Lage", "Klimaanlage", "Drei Badezimmer", "Waschmaschine und Trockner", "Teilweise überdachte Terrasse", "Preis unter 6.500 €"],
-  "personalNegatives": ["Nur Doppelbetten", "Pooltiefe noch offen", "Eingezäunter Pool optisch Geschmackssache", "Zentrale statt nordöstliche Lage", "Möglicher Fluglärm"],
+  "reviewPositives": [
+    "Sehr private Lage",
+    "Gute Ausstattung"
+  ],
+  "reviewNegatives": [
+    "Je nach Wind kann Fluglärm hörbar sein"
+  ],
+  "personalPositives": [
+    "Sehr private und ruhige Lage",
+    "Klimaanlage",
+    "Drei Badezimmer",
+    "Waschmaschine und Trockner",
+    "Teilweise überdachte Terrasse",
+    "Preis unter 6.500 €"
+  ],
+  "personalNegatives": [
+    "Nur Doppelbetten",
+    "Pooltiefe noch offen",
+    "Eingezäunter Pool optisch Geschmackssache",
+    "Zentrale statt nordöstliche Lage",
+    "Möglicher Fluglärm"
+  ],
   "memoryAnchor": "Die grüne, private Finca mit eingezäuntem Pool",
   "ourImpression": "Sehr schöne, grüne und private Finca mit starkem Außenbereich, überdachter Terrasse, Klimaanlage und guter Ausstattung. Der eingezäunte Pool ist für Kinder praktisch, optisch aber Geschmackssache. Größte Fragezeichen für uns sind die drei Doppelbetten, die noch unbekannte Pooltiefe und die zentrale statt nordöstliche Lage.",
   "availability": {
     "summary": "Juli und August 2027 noch frei",
     "intervals": [
-      { "start": "2027-07-24", "end": "2027-08-15", "state": "available" }
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
     ]
   },
-  "images": [],
+  "images": [
+    {
+      "url": "assets/fincas/15-can-pintad.jpg",
+      "alt": "Can Pintad mit Haus, Garten und Pool aus der Luft"
+    }
+  ],
   "familyRatings": {}
 }

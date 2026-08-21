@@ -1,3 +1,78 @@
 {
-  "id":"casa-manolo","quickRatings":{},"name":"20 · Casa Manolo","status":"active","provider":"Ralfs Fincas","listingUrl":"https://www.ralfsfincas.de/302/finca-casa-manolo?start=2027-07-28&end=2027-08-11","location":"Artà","region":"Nordost","islandArea":"Nordost","price":6244,"currency":"EUR","priceNote":"Vorläufig 446 € × 14 Nächte; Gesamtpreis final bestätigen","nights":14,"adults":4,"children":2,"bedrooms":3,"bathrooms":3,"bedConfiguration":"1 Doppelzimmer + 2 Schlafzimmer mit jeweils 2 Einzelbetten","sleepingCapacity":"Sehr flexible Aufteilung für unsere Gruppe.","sleepingConsiderations":"Vier Einzelbetten sind besonders praktisch für Kinder und Großeltern.","pool":{"length":10,"width":5,"area":50,"display":"10 × 5 m Salzwasserpool","minDepth":1.2,"maxDepth":1.9,"saltwater":true,"jumpingAssessment":"Sehr großer Pool; geeignete Sprungstelle vor Ort prüfen."},"airConditioning":"Ja, in allen Schlafzimmern","washingMachine":"Ja","privacy":"Großes Grundstück, ruhig und privat","neighbours":"Nächster Nachbar ca. 60 m entfernt","roadNoise":"Ruhige Lage beschrieben","outdoorArea":"Ca. 15.000 m² mit Pool, Jacuzzi und großzügigem Außenbereich","coveredTerrace":"Ja","kitchenToTerrace":"prüfen","terraceToPool":"Sehr gut – überdachte Terrasse und Außenküche am Poolbereich","poolVisibility":"Gut","outdoorKitchen":"Ja","barbecue":"Ja","personalPositives":["10 × 5 m Salzwasserpool","Pool bis 1,90 m tief","Überdachte Terrasse und Außenküche","Vier Einzelbetten","3 Badezimmer","Klimaanlage","Waschmaschine","Jacuzzi","Nordostlage bei Artà"],"personalNegatives":["Nachbar ca. 60 m entfernt","Gesamtpreis final bestätigen"],"memoryAnchor":"Die bei Artà mit dem großen 10×5-m-Salzwasserpool, Jacuzzi und Außenküche","ourImpression":"Sehr starker Kandidat: großer Pool, geselliger Außenbereich und besonders gute Schlafaufteilung.","availability":{"summary":"28.07.–11.08.2027; final bestätigen","intervals":[{"start":"2027-07-28","end":"2027-08-11","state":"check"}]},"images":[],"familyRatings":{}
+  "id": "casa-manolo",
+  "quickRatings": {},
+  "name": "20 · Casa Manolo",
+  "status": "active",
+  "provider": "Ralfs Fincas",
+  "listingUrl": "https://www.ralfsfincas.de/302/finca-casa-manolo?start=2027-07-28&end=2027-08-11",
+  "location": "Artà",
+  "region": "Nordost",
+  "islandArea": "Nordost",
+  "price": 6244,
+  "currency": "EUR",
+  "priceNote": "Vorläufig 446 € × 14 Nächte; Gesamtpreis final bestätigen",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 3,
+  "bathrooms": 3,
+  "bedConfiguration": "1 Doppelzimmer + 2 Schlafzimmer mit jeweils 2 Einzelbetten",
+  "sleepingCapacity": "Sehr flexible Aufteilung für unsere Gruppe.",
+  "sleepingConsiderations": "Vier Einzelbetten sind besonders praktisch für Kinder und Großeltern.",
+  "pool": {
+    "length": 10,
+    "width": 5,
+    "area": 50,
+    "display": "10 × 5 m Salzwasserpool",
+    "minDepth": 1.2,
+    "maxDepth": 1.9,
+    "saltwater": true,
+    "jumpingAssessment": "Sehr großer Pool; geeignete Sprungstelle vor Ort prüfen."
+  },
+  "airConditioning": "Ja, in allen Schlafzimmern",
+  "washingMachine": "Ja",
+  "privacy": "Großes Grundstück, ruhig und privat",
+  "neighbours": "Nächster Nachbar ca. 60 m entfernt",
+  "roadNoise": "Ruhige Lage beschrieben",
+  "outdoorArea": "Ca. 15.000 m² mit Pool, Jacuzzi und großzügigem Außenbereich",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "prüfen",
+  "terraceToPool": "Sehr gut – überdachte Terrasse und Außenküche am Poolbereich",
+  "poolVisibility": "Gut",
+  "outdoorKitchen": "Ja",
+  "barbecue": "Ja",
+  "personalPositives": [
+    "10 × 5 m Salzwasserpool",
+    "Pool bis 1,90 m tief",
+    "Überdachte Terrasse und Außenküche",
+    "Vier Einzelbetten",
+    "3 Badezimmer",
+    "Klimaanlage",
+    "Waschmaschine",
+    "Jacuzzi",
+    "Nordostlage bei Artà"
+  ],
+  "personalNegatives": [
+    "Nachbar ca. 60 m entfernt",
+    "Gesamtpreis final bestätigen"
+  ],
+  "memoryAnchor": "Die bei Artà mit dem großen 10×5-m-Salzwasserpool, Jacuzzi und Außenküche",
+  "ourImpression": "Sehr starker Kandidat: großer Pool, geselliger Außenbereich und besonders gute Schlafaufteilung.",
+  "availability": {
+    "summary": "28.07.–11.08.2027; final bestätigen",
+    "intervals": [
+      {
+        "start": "2027-07-28",
+        "end": "2027-08-11",
+        "state": "check"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "assets/fincas/20-casa-manolo.jpg",
+      "alt": "Casa Manolo mit großem Pool und Berglandschaft aus der Luft"
+    }
+  ],
+  "familyRatings": {}
 }
