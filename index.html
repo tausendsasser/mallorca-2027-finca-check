@@ -36,7 +36,7 @@
       <div class="filters" id="filters" hidden>
         <label>Status<select id="status-filter"><option value="active">Aktiv</option><option value="candidate">Kandidaten</option><option value="all">Alle inkl. ausgeschlossen</option></select></label>
         <label>Region<select id="region-filter"><option value="all">Alle Regionen</option></select></label>
-        <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="price">Preis</option><option value="pool">Poolgröße</option><option value="name">Name</option></select></label>
+        <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="number">Nummerierung 1 → 15</option><option value="newest">Zuletzt hinzugefügt</option><option value="price">Preis</option><option value="pool">Poolgröße</option><option value="name">Name</option></select></label>
       </div>
 
       <div class="spotlight" id="spotlight"></div>
@@ -91,5 +91,6 @@
 
   <template id="loading-template"><div class="loading"><span></span><p>Unsere Fincas werden vorbereitet …</p></div></template>
   <script src="app.js" defer></script>
+  <script src="enhancements.js" defer></script>
 </body>
 </html>
