@@ -30,13 +30,13 @@
           <p class="eyebrow">Unsere Auswahl</p>
           <h2>Welche fühlt sich richtig an?</h2>
         </div>
-        <button class="filter-toggle" data-action="toggle-filters" aria-expanded="false">Filtern</button>
+        <button class="filter-toggle" data-action="toggle-filters" aria-expanded="false">Sortieren</button>
       </div>
 
-      <div class="filters" id="filters" hidden>
-        <label>Status<select id="status-filter"><option value="active">Aktiv</option><option value="candidate">Kandidaten</option><option value="all">Alle inkl. ausgeschlossen</option></select></label>
-        <label>Region<select id="region-filter"><option value="all">Alle Regionen</option></select></label>
+      <div class="filters sort-panel" id="filters" hidden>
         <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="newest">Zuletzt hinzugefügt</option><option value="price">Preis</option><option value="pool">Poolgröße</option><option value="name">Name</option></select></label>
+        <select id="status-filter" hidden aria-hidden="true"><option value="active" selected>Aktiv</option></select>
+        <select id="region-filter" hidden aria-hidden="true"><option value="all" selected>Alle Regionen</option></select>
       </div>
 
       <div class="spotlight" id="spotlight" hidden></div>
@@ -58,35 +58,23 @@
     <button data-action="open-suggest"><span>＋</span>Vorschlagen</button>
   </nav>
 
-  <dialog class="detail-dialog" id="detail-dialog">
-    <article id="detail-content"></article>
-  </dialog>
+  <dialog class="detail-dialog" id="detail-dialog"><article id="detail-content"></article></dialog>
 
   <dialog class="suggest-dialog" id="suggest-dialog">
     <form class="suggest-card" id="suggest-form" novalidate>
       <button class="dialog-close" type="button" data-close-suggest aria-label="Schließen">×</button>
-      <p class="eyebrow">Neue Entdeckung</p>
-      <h2>Finca vorschlagen</h2>
+      <p class="eyebrow">Neue Entdeckung</p><h2>Finca vorschlagen</h2>
       <p>Du hast eine interessante Finca gefunden? Schick uns einfach den Link.</p>
-      <label for="suggest-url">Link zur Unterkunft</label>
-      <input id="suggest-url" type="url" placeholder="https://…" required>
+      <label for="suggest-url">Link zur Unterkunft</label><input id="suggest-url" type="url" placeholder="https://…" required>
       <p class="form-error" id="suggest-error" aria-live="polite"></p>
-      <div class="share-actions">
-        <button type="button" data-share="whatsapp">WhatsApp</button>
-        <button type="button" data-share="email">E-Mail</button>
-        <button type="button" data-share="copy">Link kopieren</button>
-      </div>
+      <div class="share-actions"><button type="button" data-share="whatsapp">WhatsApp</button><button type="button" data-share="email">E-Mail</button><button type="button" data-share="copy">Link kopieren</button></div>
       <button class="cancel-button" type="button" data-close-suggest>Abbrechen</button>
       <p class="privacy-note">Der Link wird nur über die von dir gewählte App geteilt und nicht auf dieser Website gespeichert.</p>
     </form>
   </dialog>
 
   <dialog class="lightbox" id="lightbox">
-    <button class="dialog-close" data-close-lightbox aria-label="Bild schließen">×</button>
-    <button class="gallery-arrow gallery-arrow--left" data-lightbox-step="-1" aria-label="Vorheriges Bild">‹</button>
-    <img id="lightbox-image" alt="Vergrößerte Finca-Ansicht">
-    <button class="gallery-arrow gallery-arrow--right" data-lightbox-step="1" aria-label="Nächstes Bild">›</button>
-    <span class="lightbox-count" id="lightbox-count"></span>
+    <button class="dialog-close" data-close-lightbox aria-label="Bild schließen">×</button><button class="gallery-arrow gallery-arrow--left" data-lightbox-step="-1" aria-label="Vorheriges Bild">‹</button><img id="lightbox-image" alt="Vergrößerte Finca-Ansicht"><button class="gallery-arrow gallery-arrow--right" data-lightbox-step="1" aria-label="Nächstes Bild">›</button><span class="lightbox-count" id="lightbox-count"></span>
   </dialog>
 
   <template id="loading-template"><div class="loading"><span></span><p>Unsere Fincas werden vorbereitet …</p></div></template>
