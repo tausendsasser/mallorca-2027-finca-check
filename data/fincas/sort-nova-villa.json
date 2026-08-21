@@ -1,0 +1,81 @@
+{
+  "id": "sort-nova-villa",
+  "quickRatings": {},
+  "name": "7 · Sort Nova Villa",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1949105",
+  "location": "Montuïri",
+  "region": "Zentral",
+  "islandArea": "Zentral",
+  "price": 4071,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "beds": null,
+  "bedConfiguration": "Mehrere Einzel- und Doppelbetten; sehr flexibel",
+  "sleepingCapacity": "Vier Schlafzimmer mit mehreren Einzel- und Doppelbetten – sehr großzügig.",
+  "sleepingConsiderations": "Die Verteilung ist flexibel; die genaue Zuordnung pro Zimmer sollte vor der Entscheidung festgehalten werden.",
+  "pool": {
+    "length": 10,
+    "width": 5,
+    "area": 50,
+    "display": "10 × 5 m",
+    "minDepth": 1.5,
+    "maxDepth": 2.5,
+    "saltwater": null,
+    "jumpingAssessment": "Sehr gut: groß und tief"
+  },
+  "airConditioning": "Ja, in Schlafräumen",
+  "washingMachine": "prüfen",
+  "privacy": "Nachbarhunde erwähnt",
+  "neighbours": "Hunde hörbar",
+  "roadNoise": "Ma-15 hörbar",
+  "outdoorArea": "Schön und großzügig",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "Gut",
+  "terraceToPool": "Sehr gut",
+  "poolVisibility": "Sehr gut",
+  "outdoorKitchen": "unknown",
+  "barbecue": "Ja",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [
+    "Straße und Nachbarhunde erwähnt"
+  ],
+  "personalPositives": [
+    "Günstig",
+    "Tiefer Pool",
+    "Schöner Außenbereich"
+  ],
+  "personalNegatives": [
+    "Ma-15 hörbar"
+  ],
+  "memoryAnchor": "Der 2,50 m tiefe Pool",
+  "ourImpression": "Sort Nova bietet viel Platz, einen großen und tiefen Pool sowie einen sehr attraktiven Preis. Die Terrasse-Pool-Verbindung passt gut zu unserem Wunsch nach Geselligkeit. Dagegen steht, dass die Ma-15 und Nachbarhunde hörbar sein könnten; der tiefe Pool bleibt trotzdem sofort im Gedächtnis.",
+  "availability": {
+    "summary": "Im Suchzeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/35000000/34880000/34873400/34873377/1634a17a.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "alt": "Pool und Außenbereich von Sort Nova Villa"
+    }
+  ],
+  "familyRatings": {}
+}
+

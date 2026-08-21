@@ -1,0 +1,96 @@
+{
+  "id": "casa-son-bordoi",
+  "quickRatings": {},
+  "name": "8 · Casa Son Bordoi",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6516102",
+  "location": "Llubí",
+  "region": "Nord / nördliche Mitte",
+  "islandArea": "Nord",
+  "price": 6883,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "beds": 7,
+  "bedConfiguration": "5 Einzelbetten + 1 Kingsize",
+  "sleepingCapacity": "7 Schlafplätze – ausreichend und flexibel.",
+  "sleepingConsiderations": "Fünf Einzelbetten und ein Kingsize-Bett verteilen sich auf vier Schlafzimmer und passen gut zu unterschiedlichen Schlafwünschen.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": null,
+    "display": "Lang und schmal; Maße offen",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "unknown"
+  },
+  "airConditioning": "prüfen",
+  "washingMachine": "prüfen",
+  "privacy": "Kompakter und ortsnah",
+  "neighbours": "unknown",
+  "roadNoise": "unknown",
+  "outdoorArea": "Modern",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "prüfen",
+  "poolVisibility": "unknown",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [
+    "Sehr gute Bewertungen"
+  ],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Modern",
+    "Sehr gute Bewertungen"
+  ],
+  "personalNegatives": [
+    "Weniger abgeschieden"
+  ],
+  "memoryAnchor": "Das moderne Haus in Llubí",
+  "ourImpression": "Casa Son Bordoi wirkt modern, gepflegt und bietet eine sehr flexible Schlafaufteilung. Der lange Pool und die guten Bewertungen sprechen für das Haus. Es liegt allerdings ortsnäher und damit weniger abgeschieden; im Gedächtnis bleibt der moderne Charakter in Llubí.",
+  "availability": {
+    "summary": "Im Suchzeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/6850e3cc.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Pool und Haus von Casa Son Bordoi"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/c4ccc600.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Wohnbereich"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/56092d90.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Terrasse und Hauseingang"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/86e97fbf.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Küche und Essbereich"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/19000000/18780000/18771000/18770996/a809b91a.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Moderne Küche"
+    }
+  ],
+  "familyRatings": {}
+}
+

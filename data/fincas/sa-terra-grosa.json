@@ -1,0 +1,90 @@
+{
+  "id": "sa-terra-grosa",
+  "quickRatings": {},
+  "name": "6 · Sa Terra Grosa",
+  "status": "active",
+  "provider": "Fincallorca",
+  "listingUrl": "https://www.fincallorca.de/ferienhaeuser/sa-terra-grosa-binissalem-emf697",
+  "location": "Binissalem",
+  "region": "Zentral / westliche Mitte",
+  "islandArea": "Zentral",
+  "price": null,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 2,
+  "beds": null,
+  "bedConfiguration": "Etagen gut trennbar; unten Doppel + 2 Einzel, oben flexibel",
+  "sleepingCapacity": "Vier Schlafzimmer – Kapazität wirkt großzügig, genaue Bettenzahl noch prüfen.",
+  "sleepingConsiderations": "Die Etagen lassen sich gut trennen; unten gibt es ein Doppelbett und zwei Einzelbetten, oben eine flexible Aufteilung.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": 40,
+    "display": "40 m²",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "unknown"
+  },
+  "airConditioning": "Ja",
+  "washingMachine": "prüfen",
+  "privacy": "Nachbar ca. 80 m; Straße möglich",
+  "neighbours": "Ca. 80 m entfernt",
+  "roadNoise": "Möglich; prüfen",
+  "outdoorArea": "Garten wirkt eher trist",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "Gut",
+  "poolVisibility": "Gut",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Starke Schlafaufteilung"
+  ],
+  "personalNegatives": [
+    "Garten wirkt trist",
+    "Nachbar sichtbar"
+  ],
+  "memoryAnchor": "Die gute Aufteilung über zwei Etagen",
+  "ourImpression": "Sa Terra Grosa hat eine starke, gut trennbare Schlafaufteilung und eine praktische Verbindung zum Pool. Der Garten wirkt auf den Bildern jedoch etwas trist, und ein Nachbar ist sichtbar. Im Gedächtnis bleibt vor allem die flexible Nutzung der beiden Etagen.",
+  "availability": {
+    "summary": "Im Suchzeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_01.jpg",
+      "alt": "Pool von Sa Terra Grosa"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_02.jpg",
+      "alt": "Poolbereich von Sa Terra Grosa"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf697_pool_03.jpg",
+      "alt": "Weitere Poolansicht"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf697_outdoor_01.jpg",
+      "alt": "Außenbereich von Sa Terra Grosa"
+    }
+  ],
+  "familyRatings": {}
+}
+

@@ -1,0 +1,90 @@
+{
+  "id": "short-de-carrossa",
+  "quickRatings": {},
+  "name": "2 · S’Hort de Carrossa",
+  "status": "active",
+  "provider": "Fincallorca",
+  "listingUrl": "https://www.fincallorca.de/ferienhaeuser/short-de-carrossa-arta-emf658",
+  "location": "Artà",
+  "region": "Nordost",
+  "islandArea": "Nordost",
+  "price": 6036,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "beds": 6,
+  "bedConfiguration": "2 Doppelzimmer + 1 Zimmer mit 2 Einzelbetten",
+  "sleepingCapacity": "6 Schlafplätze – passend für unsere Gruppengröße.",
+  "sleepingConsiderations": "Zwei Doppelzimmer und ein Zimmer mit zwei Einzelbetten ergeben eine grundsätzlich passende Aufteilung.",
+  "pool": {
+    "length": 8,
+    "width": 4,
+    "area": 32,
+    "display": "8 × 4 m",
+    "minDepth": 1.1,
+    "maxDepth": 1.8,
+    "saltwater": null,
+    "jumpingAssessment": "Gut nutzbar; vor Ort prüfen"
+  },
+  "airConditioning": "Ja",
+  "washingMachine": "prüfen",
+  "privacy": "Sehr privat; langer Privatweg",
+  "neighbours": "Kaum sichtbar",
+  "roadNoise": "Ruhig",
+  "outdoorArea": "Großes, privates Grundstück",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "Gut, Poolbereich aber erhöht",
+  "poolVisibility": "Teilweise",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Tolles Grundstück",
+    "Sehr privat"
+  ],
+  "personalNegatives": [
+    "Edelstahlzaun am Pool stört optisch"
+  ],
+  "memoryAnchor": "Der lange Privatweg",
+  "ourImpression": "Das Grundstück wirkt sehr schön, weitläufig und privat. Die Schlafaufteilung passt grundsätzlich gut für uns. Marcel stört allerdings der erhöhte Poolbereich mit dem Edelstahlzaun, weil der Pool dadurch etwas weniger idyllisch wirkt als der Rest des Grundstücks.",
+  "availability": {
+    "summary": "20.07. bis Ende August frei",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_01.jpg",
+      "alt": "Pool von S’Hort de Carrossa"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_02.jpg",
+      "alt": "Poolbereich von S’Hort de Carrossa"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_03.jpg",
+      "alt": "Außenbereich am Pool"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf658_pool_04.jpg",
+      "alt": "Weitere Poolansicht"
+    }
+  ],
+  "familyRatings": {}
+}
+

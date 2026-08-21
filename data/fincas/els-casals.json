@@ -1,0 +1,79 @@
+{
+  "id": "els-casals",
+  "quickRatings": {},
+  "name": "12 · Els Casals",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p897166",
+  "location": "Pollença",
+  "region": "Nord / Nordwest",
+  "islandArea": "Nordwest",
+  "price": 6544,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 4,
+  "beds": 8,
+  "bedConfiguration": "1 Doppelzimmer + 3 Zimmer mit je 2 Einzelbetten",
+  "sleepingCapacity": "8 Schlafplätze – sehr großzügig.",
+  "sleepingConsiderations": "Ein Doppelzimmer und drei Zimmer mit je zwei Einzelbetten bieten eine klare, sehr flexible Familienaufteilung; jedes Schlafzimmer hat rechnerisch ein Bad.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": null,
+    "display": "Eher klein; Maße offen",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "Größe und Tiefe prüfen"
+  },
+  "airConditioning": "Ja, nachts / Zeiten prüfen",
+  "washingMachine": "Ja",
+  "privacy": "Sehr ruhig und abgeschieden",
+  "neighbours": "Kaum sichtbar",
+  "roadNoise": "Sehr ruhig",
+  "outdoorArea": "Rustikal und ruhig",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "Gut",
+  "terraceToPool": "Sehr gut",
+  "poolVisibility": "Sehr gut",
+  "outdoorKitchen": "unknown",
+  "barbecue": "Ja",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Starke Ruhe",
+    "Sehr gute Terrasse-Pool-Verbindung"
+  ],
+  "personalNegatives": [
+    "Rustikal",
+    "Pool eher klein"
+  ],
+  "memoryAnchor": "Die abgeschiedene Terrasse bei Pollença",
+  "ourImpression": "Els Casals überzeugt mit einer sehr klaren Schlafaufteilung, vier Bädern und viel Ruhe. Terrasse, Außenessen und Pool liegen für gemeinsames Familienleben gut zusammen. Der rustikale Stil und der eher kleine Pool sind die Gegenpunkte; im Gedächtnis bleibt die abgeschiedene Lage bei Pollença.",
+  "availability": {
+    "summary": "Im Suchzeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/25000000/24890000/24889000/24888945/fb7aac98.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "alt": "Außenbereich von Els Casals"
+    }
+  ],
+  "familyRatings": {}
+}
+

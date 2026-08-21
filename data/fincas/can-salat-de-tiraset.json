@@ -1,0 +1,90 @@
+{
+  "id": "can-salat-de-tiraset",
+  "quickRatings": {},
+  "name": "1 · Can Salat de Tiraset",
+  "status": "active",
+  "provider": "Fincallorca",
+  "listingUrl": "https://www.fincallorca.de/ferienhaeuser/can-salat-de-tiraset-llubi-emf402",
+  "location": "Llubí",
+  "region": "Nord / nördliche Mitte",
+  "islandArea": "Nord",
+  "price": 6362,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 4,
+  "beds": 8,
+  "bedConfiguration": "8 Schlafplätze; Etagenbett im unteren Bereich und offener Schlafbereich oben",
+  "sleepingCapacity": "8 Schlafplätze – grundsätzlich sehr großzügig.",
+  "sleepingConsiderations": "Etagenbett im unteren Bereich und ein offener/gläserner Schlafbereich oben. Für die Kinder könnte dadurch eine ungünstige Trennung entstehen.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": 66,
+    "display": "66 m²",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "unknown"
+  },
+  "airConditioning": "Ja, gegen Aufpreis",
+  "washingMachine": "Ja",
+  "privacy": "unknown",
+  "neighbours": "unknown",
+  "roadNoise": "Straßennähe prüfen",
+  "outdoorArea": "Großer Pool",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "prüfen",
+  "poolVisibility": "unknown",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Sehr großer Pool",
+    "Großzügige Kapazität mit 8 Schlafplätzen"
+  ],
+  "personalNegatives": [
+    "Die praktische Schlafverteilung muss für die Kinder geprüft werden"
+  ],
+  "memoryAnchor": "Der 66-m²-Pool",
+  "ourImpression": "Der außergewöhnlich große Pool und die acht Schlafplätze machen Can Salat grundsätzlich sehr interessant. Für unsere Familie müssen wir aber genau prüfen, ob Etagenbett und offener Schlafbereich eine ungünstige Trennung der Kinder ergeben. Im Gedächtnis bleibt vor allem der riesige Poolbereich.",
+  "availability": {
+    "summary": "Juli/August komplett frei",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_01.jpg",
+      "alt": "Pool von Can Salat de Tiraset"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_02.jpg",
+      "alt": "Poolbereich von Can Salat de Tiraset"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_03.jpg",
+      "alt": "Außenbereich am Pool"
+    },
+    {
+      "url": "https://image.novasol.com/pic/1024/emf/emf402_pool_04.jpg",
+      "alt": "Weitere Poolansicht"
+    }
+  ],
+  "familyRatings": {}
+}
+

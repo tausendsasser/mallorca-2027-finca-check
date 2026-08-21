@@ -1,16 +1,18 @@
 # Datenpflege: Mallorca 2027 – Finca Check
 
-Die App liest beim Start ausschließlich `data/fincas.json`. Eine neue oder geänderte Finca benötigt keine Änderung an HTML, CSS oder JavaScript.
+Die App lädt beim Start `data/config.json`, `data/fincas/index.json` und die dort aufgeführten einzelnen Finca-Dateien. Eine neue oder geänderte Finca benötigt keine Änderung an HTML, CSS oder JavaScript.
 
 ## Aufbau der Datei
 
+- `data/config.json` enthält `schemaVersion`, `lastUpdated`, Reise-, Familien- und Bewertungseinstellungen.
+- `data/fincas/index.json` ist ein JSON-Array mit den Dateinamen in der gewünschten Anzeigereihenfolge.
+- `data/fincas/<id>.json` enthält genau einen vollständigen Finca-Datensatz.
 - `schemaVersion`: Version des Datenmodells.
 - `lastUpdated`: Datum der letzten inhaltlichen Änderung im Format `YYYY-MM-DD`.
 - `trip`: globales Urlaubsfenster, Idealzeitraum, Personenzahl und Reisedauer.
 - `familyMembers`: Personen, die Bewertungen abgeben dürfen.
 - `ratingCriteria`: Kriterien, Gewichtungen und Muss-Kriterien.
 - `ratingRules.mustCriteriaScoreCap`: maximale Gesamtwertung, falls ein Muss-Kriterium die Schwelle unterschreitet.
-- `fincas`: Liste aller Unterkünfte.
 
 ## Pflichtfelder pro Finca
 
@@ -164,11 +166,12 @@ Bewertungen und persönliche Notizen, die Besucher direkt in Version 1 der Websi
 
 ## Sicherer Update-Ablauf für einen KI-Agenten
 
-1. `data/fincas.json` lesen und nach identischer `listingUrl` sowie ähnlichem Namen suchen.
+1. Die Dateien aus `data/fincas/index.json` lesen und nach identischer `listingUrl` sowie ähnlichem Namen suchen.
 2. Bei einem Treffer den bestehenden Datensatz aktualisieren; keinen zweiten Datensatz erzeugen.
 3. Bei einer ausgeschlossenen Finca den Ausschluss respektieren und nur auf ausdrücklichen Wunsch ändern.
-4. Bei einer neuen Finca das Beispiel vollständig kopieren, eine eindeutige `id` vergeben und recherchierte Felder ergänzen.
-5. JSON-Syntax prüfen und sicherstellen, dass alle IDs eindeutig sind.
+4. Bei einer neuen Finca das Beispiel vollständig als `data/fincas/<id>.json` anlegen, eine eindeutige `id` vergeben, recherchierte Felder ergänzen und den Dateinamen am Ende von `data/fincas/index.json` eintragen.
+5. JSON-Syntax aller geänderten Dateien prüfen und sicherstellen, dass alle IDs sowie alle Einträge in `index.json` eindeutig sind.
    Bei Bildern nur öffentliche Anbieter-URLs referenzieren, keine fremden Bilddateien ins Repository kopieren. Funktioniert eine Bild-URL nicht mehr, wird sie ersetzt oder aus `images` entfernt.
-6. Nur `data/fincas.json` ändern, sofern keine neue Frontend-Funktion angefordert wurde.
+6. Bei einer bestehenden Finca nur deren einzelne Datei ändern. Bei einer neuen Finca zusätzlich nur `data/fincas/index.json` und `data/config.json` (`lastUpdated`) anpassen.
 7. Änderung committen und auf den GitHub-Pages-Branch veröffentlichen. GitHub Pages aktualisiert die App anschließend automatisch.
+

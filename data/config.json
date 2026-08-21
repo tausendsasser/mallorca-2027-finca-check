@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-08-21",
+  "trip": {
+    "title": "Mallorca 2027 – Finca Check",
+    "windowStart": "2027-07-24",
+    "windowEnd": "2027-08-15",
+    "idealStart": "2027-07-28",
+    "idealEnd": "2027-08-11",
+    "nights": 14,
+    "adults": 4,
+    "children": 2,
+    "preferredRegions": [
+      "Nordost",
+      "Nord",
+      "Nord / Nordwest"
+    ]
+  },
+  "familyMembers": [
+    "Marcel",
+    "Alina",
+    "Opi",
+    "Oma",
+    "Milia",
+    "Malea"
+  ],
+  "ratingRules": {
+    "scaleMin": 1,
+    "scaleMax": 10,
+    "mustCriteriaScoreCap": 5
+  },
+  "ratingCriteria": [
+    {
+      "id": "sleeping",
+      "label": "Schlafsituation",
+      "weight": 0.2,
+      "required": true,
+      "minimum": 5
+    },
+    {
+      "id": "privacy",
+      "label": "Ruhe & Alleinlage",
+      "weight": 0.15,
+      "required": true,
+      "minimum": 5
+    },
+    {
+      "id": "socialPool",
+      "label": "Terrasse → Pool / Geselligkeit",
+      "weight": 0.15,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "pool",
+      "label": "Pool",
+      "weight": 0.15,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "region",
+      "label": "Region / Insellage",
+      "weight": 0.1,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "outdoor",
+      "label": "Außenbereich / Atmosphäre",
+      "weight": 0.1,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "climate",
+      "label": "Klimakomfort",
+      "weight": 0.05,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "value",
+      "label": "Preis-Leistung",
+      "weight": 0.05,
+      "required": false,
+      "minimum": null
+    },
+    {
+      "id": "gutFeeling",
+      "label": "Bauchgefühl",
+      "weight": 0.05,
+      "required": false,
+      "minimum": null
+    }
+  ]
+}
+

@@ -1,0 +1,71 @@
+{
+  "id": "ses-velletes-7",
+  "quickRatings": {},
+  "name": "Ses Velletes 7",
+  "status": "excluded",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p10023975",
+  "location": "Artà",
+  "region": "Nordost",
+  "islandArea": "Nordost",
+  "price": 6685,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": null,
+  "bathrooms": null,
+  "beds": null,
+  "bedConfiguration": "unknown",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": null,
+    "display": "Eher klein und flach",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "Für Springen und Toben eher ungeeignet"
+  },
+  "airConditioning": "Nein",
+  "washingMachine": "unknown",
+  "privacy": "Eigentümerhaus nah",
+  "neighbours": "Eigentümerhaus auf dem Grundstück",
+  "roadNoise": "unknown",
+  "outdoorArea": "unknown",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "unknown",
+  "poolVisibility": "unknown",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [
+    "Hunde in älterer Bewertung erwähnt"
+  ],
+  "personalPositives": [],
+  "personalNegatives": [
+    "Pool eher klein und flach",
+    "Keine Klimaanlage",
+    "Eigentümerhaus nah"
+  ],
+  "memoryAnchor": "Bewusst ausgeschlossen – nicht erneut aufnehmen",
+  "availability": {
+    "summary": "Nicht mehr relevant",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "unknown"
+      }
+    ]
+  },
+  "images": [],
+  "familyRatings": {}
+}
+

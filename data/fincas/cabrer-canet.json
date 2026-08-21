@@ -1,0 +1,78 @@
+{
+  "id": "cabrer-canet",
+  "quickRatings": {},
+  "name": "5 · Cabrer Canet",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p11747066",
+  "location": "Canyamel / Capdepera",
+  "region": "Nordost",
+  "islandArea": "Nordost",
+  "price": 6685,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "beds": 8,
+  "bedConfiguration": "4 Einzelbetten + 2 Doppelbetten",
+  "sleepingCapacity": "8 Schlafplätze – großzügig für sechs Personen.",
+  "sleepingConsiderations": "Vier Einzel- und zwei Doppelbetten verteilen sich auf vier Schlafzimmer und bieten gute Flexibilität.",
+  "pool": {
+    "length": 7,
+    "width": 3.5,
+    "area": 24.5,
+    "display": "7 × 3,5 m",
+    "minDepth": 1.65,
+    "maxDepth": 1.65,
+    "saltwater": null,
+    "jumpingAssessment": "Relativ klein, aber ausreichend tief"
+  },
+  "airConditioning": "Keine erkennbar",
+  "washingMachine": "prüfen",
+  "privacy": "Gut",
+  "neighbours": "unknown",
+  "roadNoise": "unknown",
+  "outdoorArea": "unknown",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "prüfen",
+  "poolVisibility": "unknown",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Gute Lage"
+  ],
+  "personalNegatives": [
+    "Pool eher klein",
+    "Keine Klimaanlage erkennbar"
+  ],
+  "memoryAnchor": "Canyamel und der tiefe Pool",
+  "ourImpression": "Cabrer Canet bietet eine großzügige Schlafkapazität und eine interessante Lage bei Canyamel. Der Pool ist zwar tief, wirkt für unsere Wünsche aber eher klein; außerdem ist keine Klimaanlage erkennbar. Im Gedächtnis bleibt die Nähe zur Küste mit Blick auf die Berge.",
+  "availability": {
+    "summary": "Im Suchzeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/113000000/112410000/112401700/112401624/f8caae9b.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "alt": "Pool und Außenbereich von Cabrer Canet"
+    }
+  ],
+  "familyRatings": {}
+}
+

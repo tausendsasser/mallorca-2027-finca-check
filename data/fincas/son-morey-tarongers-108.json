@@ -1,0 +1,78 @@
+{
+  "id": "son-morey-tarongers-108",
+  "quickRatings": {},
+  "name": "11 · Son Morey Tarongers 108",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p2592734",
+  "location": "Muro",
+  "region": "Nord",
+  "islandArea": "Nord",
+  "price": 6115,
+  "currency": "EUR",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "beds": null,
+  "bedConfiguration": "prüfen",
+  "sleepingCapacity": "Vier Schlafzimmer – Kapazität wirkt passend, genaue Bettenzahl noch prüfen.",
+  "sleepingConsiderations": "Die konkrete Verteilung von Doppel-, Einzel- oder möglichen Zusatzbetten ist noch nicht geklärt.",
+  "pool": {
+    "length": null,
+    "width": null,
+    "area": null,
+    "display": "Besondere Form; Maße offen",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "unknown"
+  },
+  "airConditioning": "prüfen",
+  "washingMachine": "prüfen",
+  "privacy": "Gut",
+  "neighbours": "unknown",
+  "roadNoise": "unknown",
+  "outdoorArea": "Palmen und Naturstein; sehr schön integriert",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "Sehr schön integriert",
+  "poolVisibility": "Gut",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Palmen und Naturstein sehr schön",
+    "Pool wirkt gut integriert"
+  ],
+  "personalNegatives": [
+    "Fenstergitter stören"
+  ],
+  "memoryAnchor": "Palmen, Naturstein und der organische Pool",
+  "ourImpression": "Son Morey Tarongers wirkt durch Palmen, Naturstein und den organisch integrierten Pool besonders mediterran. Der Außenbereich spricht uns stark an, während die Fenstergitter optisch etwas stören. Im Gedächtnis bleibt vor allem die sehr stimmige Gartenatmosphäre.",
+  "availability": {
+    "summary": "24.07.–15.08. frei",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/35000000/34430000/34422400/34422362/c91105a7.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "alt": "Pool und Garten von Son Morey Tarongers 108"
+    }
+  ],
+  "familyRatings": {}
+}
+

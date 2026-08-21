@@ -7,10 +7,12 @@ Eine mobile-first Vergleichs-App für die gemeinsame Finca-Suche der Familie. Si
 - `index.html`: App-Struktur
 - `styles.css`: mediterranes, responsives Design
 - `app.js`: Rendering, Filter, Detailansicht, Vergleich und Teilen
-- `data/fincas.json`: einzige Inhalts- und Konfigurationsquelle
+- `data/config.json`: gemeinsame Reise- und Bewertungseinstellungen
+- `data/fincas/index.json`: Reihenfolge und Liste der Finca-Dateien
+- `data/fincas/<id>.json`: jeweils ein eigenständig pflegbarer Finca-Datensatz
 - `docs/DATA-MAINTENANCE.md`: Pflegeanleitung für Menschen und KI-Agenten
 
-Neue Fincas werden ausschließlich in `data/fincas.json` ergänzt. Details stehen in der Pflegeanleitung.
+Neue Fincas werden als einzelne Datei unter `data/fincas/` ergänzt und in `data/fincas/index.json` eingetragen. Details stehen in der Pflegeanleitung.
 
 ## Lokal ansehen
 
@@ -19,3 +21,4 @@ Da die App JSON per `fetch` lädt, muss sie über einen lokalen Webserver oder G
 ## GitHub Pages
 
 Repository-Einstellungen öffnen, unter **Pages** als Quelle **Deploy from a branch** wählen und den Branch `main` mit Ordner `/ (root)` auswählen.
+

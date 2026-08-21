@@ -1,0 +1,105 @@
+{
+  "id": "es-fetget",
+  "quickRatings": {},
+  "name": "3 · Es Fetget",
+  "status": "active",
+  "provider": "Fintrip / FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p6119251",
+  "location": "Son Servera",
+  "region": "Nordost",
+  "islandArea": "Nordost",
+  "price": 6146,
+  "currency": "EUR",
+  "priceNote": "Fintrip: 6.146 € · FeWo-direkt: 7.174 €",
+  "alternativePrices": [
+    {
+      "provider": "Fintrip",
+      "price": 6146
+    },
+    {
+      "provider": "FeWo-direkt",
+      "price": 7174
+    }
+  ],
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "beds": 6,
+  "bedConfiguration": "2 Zimmer mit je 2 Einzelbetten + 1 Doppelbett",
+  "sleepingCapacity": "6 Schlafplätze – passend für unsere Gruppe.",
+  "sleepingConsiderations": "Zwei Zweibettzimmer und ein Doppelzimmer bieten eine klare, familienfreundliche Verteilung.",
+  "pool": {
+    "length": 8,
+    "width": 4,
+    "area": 32,
+    "display": "8 × 4 m",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "Größe gut; Tiefe prüfen"
+  },
+  "airConditioning": "prüfen",
+  "washingMachine": "prüfen",
+  "privacy": "Sehr ruhig und privat laut Bewertungen",
+  "neighbours": "unknown",
+  "roadNoise": "Sehr ruhig",
+  "outdoorArea": "unknown",
+  "coveredTerrace": "unknown",
+  "kitchenToTerrace": "unknown",
+  "terraceToPool": "prüfen",
+  "poolVisibility": "unknown",
+  "outdoorKitchen": "unknown",
+  "barbecue": "unknown",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [
+    "Ruhe und Privatsphäre"
+  ],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Starker Kandidat",
+    "Fintrip mit 6.146 € deutlich günstiger als FeWo-direkt"
+  ],
+  "personalNegatives": [],
+  "memoryAnchor": "Der ruhige Nordosten",
+  "ourImpression": "Es Fetget wirkt ruhig, privat und durch die klare Zimmeraufteilung sehr passend für uns. Der große Pool stärkt den Gesamteindruck zusätzlich. Besonders interessant ist der Fintrip-Preis von 6.146 €, der deutlich unter dem FeWo-direkt-Preis von 7.174 € liegt.",
+  "availability": {
+    "summary": "Juli/August komplett frei",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/49b596ba.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Pool und Außenbereich von Es Fetget"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/b1e357ff.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Blick aus dem Haus zum Pool"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/a7858c70.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Haus und Pool"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/aad92bad.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Wohnbereich"
+    },
+    {
+      "url": "https://media.vrbo.com/lodging/28000000/27330000/27325700/27325643/68299964.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Essbereich"
+    }
+  ],
+  "familyRatings": {}
+}
+

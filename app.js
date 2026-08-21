@@ -487,9 +487,18 @@ async function shareSuggestion(channel) {
 async function init() {
   $('#finca-grid').append($('#loading-template').content.cloneNode(true));
   try {
-    const response = await fetch('data/fincas.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.data = await response.json();
+    const [configResponse, indexResponse] = await Promise.all([
+      fetch('data/config.json', { cache: 'no-store' }),
+      fetch('data/fincas/index.json', { cache: 'no-store' })
+    ]);
+    if (!configResponse.ok) throw new Error(`Konfiguration: HTTP ${configResponse.status}`);
+    if (!indexResponse.ok) throw new Error(`Finca-Index: HTTP ${indexResponse.status}`);
+    const [config, fincaFiles] = await Promise.all([configResponse.json(), indexResponse.json()]);
+    const fincaResponses = await Promise.all(fincaFiles.map(file => fetch(`data/fincas/${file}`, { cache: 'no-store' })));
+    const failedResponse = fincaResponses.find(response => !response.ok);
+    if (failedResponse) throw new Error(`Finca-Datensatz: HTTP ${failedResponse.status}`);
+    const fincas = await Promise.all(fincaResponses.map(response => response.json()));
+    state.data = { ...config, fincas };
     renderTrip(); populateFilters(); setupEvents(); render(); connectSharedRatings();
   } catch (error) {
     $('#finca-grid').innerHTML = '<div class="note negative"><strong>Daten konnten nicht geladen werden.</strong><br>Bitte die App über GitHub Pages oder einen lokalen Webserver öffnen.</div>';
@@ -498,3 +507,4 @@ async function init() {
 }
 
 init();
+

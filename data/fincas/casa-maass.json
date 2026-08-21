@@ -1,0 +1,88 @@
+{
+  "id": "casa-maass",
+  "quickRatings": {},
+  "name": "13 · Casa Maass",
+  "status": "active",
+  "provider": "FeWo-direkt",
+  "listingUrl": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p503460",
+  "location": "Sant Joan / nahe Sineu",
+  "region": "Zentral / leicht nordöstliche Mitte",
+  "islandArea": "Zentral",
+  "price": 6181,
+  "regularPrice": 6713,
+  "currency": "EUR",
+  "priceNote": "Frühbucherpreis – 532 € günstiger als regulär; bei Favorit nicht zu lange warten",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "beds": 8,
+  "bedConfiguration": "Vier Schlafzimmer; überwiegend Doppel-/Kingsize-Betten, genaue Aufteilung für die Kinder prüfen",
+  "sleepingCapacity": "8 Schlafplätze und vier richtige Schlafzimmer – sehr großzügig für sechs Personen.",
+  "sleepingConsiderations": "Die Kapazität ist stark. Weniger flexibel könnte sein, dass offenbar überwiegend Doppel-/Kingsize-Betten vorhanden sind und kein klassisches Kinderzimmer mit zwei Einzelbetten bestätigt ist.",
+  "pool": {
+    "length": 10,
+    "width": 4,
+    "area": 40,
+    "display": "10 × 4 m",
+    "minDepth": null,
+    "maxDepth": null,
+    "saltwater": null,
+    "jumpingAssessment": "Große Fläche; Tiefe und Springen noch prüfen"
+  },
+  "airConditioning": "Nicht bestätigt / prüfen",
+  "washingMachine": "Ja",
+  "privacy": "Sehr stark; ca. 30.000 m² und keine unmittelbaren Nachbarn",
+  "neighbours": "Keine unmittelbaren Nachbarn laut Beschreibung",
+  "roadNoise": "Sehr ruhig; Bewertungen bestätigen die Ruhe",
+  "outdoorArea": "Ca. 30.000 m² Grundstück und rund 400 m² Natursteinterrassen",
+  "coveredTerrace": "Außenessbereich vorhanden",
+  "kitchenToTerrace": "prüfen",
+  "terraceToPool": "Sehr gut",
+  "poolVisibility": "Gut",
+  "outdoorKitchen": "unknown",
+  "barbecue": "Ja",
+  "beachDistance": null,
+  "townDistance": null,
+  "restaurantDistance": null,
+  "externalRating": 10,
+  "reviewCount": 45,
+  "reviewPositives": [
+    "Außergewöhnlich viel Ruhe",
+    "Pool und Außenbereich werden häufig gelobt",
+    "Sehr engagierte Gastgeber"
+  ],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Sehr ruhige Alleinlage",
+    "10 × 4 m Pool",
+    "Große Natursteinterrassen",
+    "10/10 bei 45 Bewertungen",
+    "Schöner, solider Gesamteindruck"
+  ],
+  "personalNegatives": [
+    "Bettenaufteilung für die Kinder prüfen",
+    "Klimaanlage nicht bestätigt"
+  ],
+  "memoryAnchor": "Die extrem ruhige mit 30.000 m², Natursteinterrassen und 10×4-Pool",
+  "ourImpression": "Casa Maass wirkt wie eine sehr solide Finca mit außergewöhnlich viel Ruhe und Privatsphäre. Das große Grundstück, die Natursteinterrassen und der 10×4-m-Pool passen sehr gut zu unserem Wunsch, draußen gemeinsam zu leben und die Kinder am Pool im Blick zu haben. Acht Schlafplätze und drei Bäder sind stark; prüfen sollten wir vor allem die genaue Bettenaufteilung für die Kinder und die Klimaanlage. Die 10/10 bei 45 Bewertungen machen einen besonders guten Eindruck.",
+  "availability": {
+    "summary": "Relevanter Urlaubszeitraum verfügbar",
+    "intervals": [
+      {
+        "start": "2027-07-24",
+        "end": "2027-08-15",
+        "state": "available"
+      }
+    ]
+  },
+  "images": [
+    {
+      "url": "https://media.vrbo.com/lodging/34000000/33620000/33615900/33615895/95428444.jpg?impolicy=resizecrop&ra=fit&rw=1200",
+      "alt": "Casa Maass – Natursteinhaus mit Pool und Zypressen"
+    }
+  ],
+  "familyRatings": {}
+}
+
