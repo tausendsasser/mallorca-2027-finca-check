@@ -1,0 +1,80 @@
+{
+  "id": "ses-velletes-ralfs",
+  "quickRatings": {},
+  "name": "16 · Ses Velletes",
+  "status": "active",
+  "provider": "Ralfs Fincas",
+  "listingUrl": "https://www.ralfsfincas.de/66/finca-ses-velletes?start=2027-07-28&end=2027-08-11",
+  "location": "Artà",
+  "region": "Nordosten / Artà",
+  "islandArea": "Nordosten",
+  "price": 5740,
+  "currency": "EUR",
+  "priceNote": "410 € pro Nacht in Juli/August; 14 Nächte rechnerisch 5.740 €",
+  "nights": 14,
+  "adults": 4,
+  "children": 2,
+  "bedrooms": 4,
+  "bathrooms": 2,
+  "beds": 7,
+  "bedConfiguration": "3 Doppelzimmer und 1 Einzelzimmer",
+  "sleepingCapacity": "Vier Schlafzimmer bieten für sechs Personen grundsätzlich viel Platz.",
+  "sleepingConsiderations": "Drei Doppelzimmer plus ein Einzelzimmer; für unsere Familienaufteilung grundsätzlich brauchbar, aber weniger flexibel als zwei echte Einzelbett-Zimmer.",
+  "pool": {
+    "length": 7,
+    "width": 4,
+    "area": 28,
+    "display": "7 × 4 m",
+    "minDepth": 1.5,
+    "maxDepth": 2.2,
+    "saltwater": null,
+    "jumpingAssessment": "Mit 1,50–2,20 m Tiefe sehr interessant für Springen und Toben; sichere Sprungbereiche vor Ort prüfen."
+  },
+  "airConditioning": "Nein – Ventilatoren in den Schlafzimmern",
+  "washingMachine": "Ja",
+  "privacy": "Ruhige, idyllische Finca-Lage nordwestlich von Artà",
+  "neighbours": "Noch genauer prüfen",
+  "roadNoise": "Ruhige Lage beschrieben; konkreten Straßenlärm weiter beobachten",
+  "outdoorArea": "Schöner Außenbereich mit Pool, überdachter Terrasse, Außenküche und Grillplatz",
+  "coveredTerrace": "Ja",
+  "kitchenToTerrace": "prüfen",
+  "terraceToPool": "Gut – überdachter Terrassen- und Essbereich am Außenbereich/Pool",
+  "poolVisibility": "Voraussichtlich gut; anhand Fotos weiter prüfen",
+  "outdoorKitchen": "Ja",
+  "barbecue": "Ja – fester Grillplatz",
+  "beachDistance": null,
+  "townDistance": "Artà ca. 5 Autominuten",
+  "restaurantDistance": null,
+  "externalRating": null,
+  "reviewCount": null,
+  "reviewPositives": [],
+  "reviewNegatives": [],
+  "personalPositives": [
+    "Sehr tiefer Pool bis 2,20 m",
+    "Überdachte Terrasse",
+    "Außenküche und Grillplatz",
+    "Waschmaschine",
+    "Ruhige Lage bei Artà",
+    "Vier Schlafzimmer",
+    "Preis unter 6.500 €"
+  ],
+  "personalNegatives": [
+    "Keine Klimaanlage – nur Ventilatoren",
+    "Nachbarsituation noch genauer prüfen",
+    "Pool mit 7 × 4 m nicht riesig, aber schön tief"
+  ],
+  "memoryAnchor": "Die bei Artà mit dem 7×4-m-Pool, der bis 2,20 m tief ist, überdachter Terrasse und Außenküche",
+  "ourImpression": "Für uns ein interessanter Kandidat im bevorzugten Nordosten. Besonders stark sind der 1,50–2,20 m tiefe Pool, die überdachte Terrasse sowie Außenküche und Grillplatz – das passt gut zu unserem Wunsch, gemeinsam draußen zu essen und die Kinder am Pool zu haben. Vier Schlafzimmer und Waschmaschine sind ebenfalls positiv. Der größte Nachteil ist die fehlende Klimaanlage; außerdem sollten wir Nachbarn und direkte Sichtbeziehung Terrasse–Pool anhand der Bilder noch genauer prüfen.",
+  "availability": {
+    "summary": "Angefragter Zeitraum 28.07.–11.08.2027 – Verfügbarkeit noch final bestätigen",
+    "intervals": [
+      {
+        "start": "2027-07-28",
+        "end": "2027-08-11",
+        "state": "unknown"
+      }
+    ]
+  },
+  "images": [],
+  "familyRatings": {}
+}
