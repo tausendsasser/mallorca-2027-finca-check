@@ -10,12 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .ski-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.ski-form-grid label{display:flex;flex-direction:column;gap:7px;font-size:.84rem;font-weight:600}.ski-form-grid input,.ski-form-grid select,.ski-form-grid textarea{font:inherit;border:1px solid rgba(35,72,59,.22);border-radius:12px;padding:12px 13px;background:#fff;color:#1d2a25}.ski-form-grid textarea{min-height:90px;resize:vertical}.ski-form-grid .span-2{grid-column:1/-1}.ski-form-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ski-form-checks label{flex-direction:row;align-items:center;font-weight:500;border:1px solid rgba(35,72,59,.12);padding:11px;border-radius:11px}.save-accommodation{width:100%;border:0;border-radius:13px;padding:14px 18px;background:#23483b;color:#fff;font:inherit;font-weight:700;cursor:pointer}.form-status{min-height:1.4em;font-size:.88rem;margin:10px 0 0}.ski-empty{padding:34px 20px;text-align:center;border:1px dashed rgba(35,72,59,.25);border-radius:18px}.ski-empty strong{display:block;font-size:1.15rem;margin-bottom:6px}.ski-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.ski-meta span{background:rgba(35,72,59,.07);padding:6px 9px;border-radius:999px;font-size:.8rem}.ski-note{margin:10px 0 0;color:#5c6863}.ski-rating-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px}.ski-rating-head select{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid rgba(35,72,59,.2)}.score-buttons{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:9px}.score-buttons button{min-width:0;padding:8px 0;border-radius:8px;border:1px solid rgba(35,72,59,.18);background:#fff;cursor:pointer}.score-buttons button.is-selected{background:#23483b;color:#fff}.sync-line{font-size:.76rem;color:#65716c;margin:7px 0 0}.accommodation-actions{display:flex;gap:10px;align-items:center;margin-top:15px}.accommodation-actions a{font-size:.88rem}.delete-accommodation{margin-left:auto;border:0;background:transparent;color:#9b3c32;cursor:pointer;font:inherit;font-size:.82rem}.spotlight[hidden]{display:none!important}@media(max-width:700px){.ski-form-grid{grid-template-columns:1fr}.ski-form-grid .span-2{grid-column:auto}.ski-form-checks{grid-template-columns:1fr}.score-buttons{grid-template-columns:repeat(5,1fr)}}
+  </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero__top">
       <div class="brand-mark" aria-hidden="true">S</div>
-      <button class="suggest-link" data-action="open-suggest">＋ Unterkunft vorschlagen</button>
+      <button class="suggest-link" data-action="open-suggest">＋ Unterkunft hinzufügen</button>
     </div>
     <p class="eyebrow">Unser Skiurlaub</p>
     <h1>Ski <em>Check</em></h1>
@@ -26,25 +29,18 @@
   <main>
     <section class="section" id="overview-view">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">Unsere Auswahl</p>
-          <h2>Welche Unterkunft gewinnt?</h2>
-        </div>
+        <div><p class="eyebrow">Unsere Auswahl</p><h2>Welche Unterkunft gewinnt?</h2></div>
         <button class="filter-toggle" data-action="toggle-filters" aria-expanded="false">Sortieren</button>
       </div>
-
       <div class="filters sort-panel" id="filters" hidden>
         <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="price">Preis</option><option value="lift">Liftentfernung</option><option value="name">Name</option></select></label>
       </div>
-
       <div class="spotlight" id="spotlight" hidden></div>
       <div class="finca-grid" id="finca-grid" aria-live="polite"></div>
     </section>
 
     <section class="section comparison-section" id="compare-view">
-      <div class="section-heading">
-        <div><p class="eyebrow">Direkter Vergleich</p><h2>Favoriten auf einen Blick</h2></div>
-      </div>
+      <div class="section-heading"><div><p class="eyebrow">Direkter Vergleich</p><h2>Favoriten auf einen Blick</h2></div></div>
       <div class="comparison-list" id="comparison-list"></div>
     </section>
   </main>
@@ -53,17 +49,28 @@
     <button class="is-active" data-scroll="overview-view"><span>⌂</span>Übersicht</button>
     <button data-scroll="finca-grid"><span>◇</span>Unterkünfte</button>
     <button data-scroll="compare-view"><span>⇄</span>Vergleich</button>
-    <button data-action="open-suggest"><span>＋</span>Vorschlagen</button>
+    <button data-action="open-suggest"><span>＋</span>Hinzufügen</button>
   </nav>
 
   <dialog class="suggest-dialog" id="suggest-dialog">
-    <form class="suggest-card" id="suggest-form" novalidate>
+    <form class="suggest-card" id="suggest-form">
       <button class="dialog-close" type="button" data-close-suggest aria-label="Schließen">×</button>
-      <p class="eyebrow">Neue Entdeckung</p><h2>Unterkunft vorschlagen</h2>
-      <p>Du hast ein interessantes Hotel, Apartment oder Ferienhaus gefunden? Schick einfach den Link.</p>
-      <label for="suggest-url">Link zur Unterkunft</label><input id="suggest-url" type="url" placeholder="https://…" required>
-      <p class="form-error" id="suggest-error" aria-live="polite"></p>
-      <div class="share-actions"><button type="button" data-share="whatsapp">WhatsApp</button><button type="button" data-share="email">E-Mail</button><button type="button" data-share="copy">Link kopieren</button></div>
+      <p class="eyebrow">Neue Unterkunft</p><h2>Unterkunft hinzufügen</h2>
+      <p>Die Unterkunft wird online gespeichert und ist danach für User 1–9 sichtbar und bewertbar.</p>
+      <div class="ski-form-grid">
+        <label class="span-2">Name der Unterkunft<input id="accommodation-name" required maxlength="100" placeholder="z. B. Alpenhotel Bergblick"></label>
+        <label class="span-2">Link<input id="accommodation-url" type="url" required placeholder="https://…"></label>
+        <label>Ort / Skigebiet<input id="accommodation-area" maxlength="100" placeholder="z. B. Sölden"></label>
+        <label>Unterkunftsart<select id="accommodation-type"><option>Hotel</option><option>Apartment</option><option>Ferienwohnung</option><option>Ferienhaus</option><option>Chalet</option><option>Pension</option><option>Sonstiges</option></select></label>
+        <label>Gesamtpreis €<input id="accommodation-price" type="number" min="0" step="1" inputmode="numeric" placeholder="z. B. 3200"></label>
+        <label>Entfernung zum Lift (m)<input id="accommodation-lift" type="number" min="0" step="10" inputmode="numeric" placeholder="z. B. 350"></label>
+        <label>Verpflegung<select id="accommodation-food"><option value="">Noch offen</option><option>Keine</option><option>Frühstück</option><option>Halbpension</option><option>Vollpension</option><option>All Inclusive</option></select></label>
+        <label>Skibus / ÖPNV<input id="accommodation-transport" maxlength="100" placeholder="z. B. Skibus vor der Tür"></label>
+        <div class="span-2 ski-form-checks"><label><input id="accommodation-wellness" type="checkbox"> Sauna / Wellness</label><label><input id="accommodation-parking" type="checkbox"> Parkplatz</label><label><input id="accommodation-skiroom" type="checkbox"> Skiraum</label></div>
+        <label class="span-2">Notiz<textarea id="accommodation-note" maxlength="500" placeholder="Was ist an der Unterkunft interessant oder noch zu prüfen?"></textarea></label>
+      </div>
+      <button class="save-accommodation" type="submit">Unterkunft speichern</button>
+      <p class="form-status" id="suggest-status" aria-live="polite"></p>
       <button class="cancel-button" type="button" data-close-suggest>Abbrechen</button>
     </form>
   </dialog>
