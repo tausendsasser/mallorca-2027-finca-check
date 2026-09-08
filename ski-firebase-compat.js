@@ -4,15 +4,15 @@
   const decodePayload = value => JSON.parse(decodeURIComponent(escape(atob(value))));
   const slug = value => String(value).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
-  window.connectFirebase = async function connectFirebaseCompat(){
-    const [{ initializeApp }, authApi, firestoreApi] = await Promise.all([
+  async function connectFirebaseCompat(){
+    const [appApi, authApi, firestoreApi] = await Promise.all([
       import('https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js'),
       import('https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js'),
       import('https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js')
     ]);
-    const app = initializeApp(firebaseConfig);
+    const app = appApi.getApps().length ? appApi.getApp() : appApi.initializeApp(firebaseConfig);
     const auth = authApi.getAuth(app);
-    await authApi.signInAnonymously(auth);
+    if (!auth.currentUser) await authApi.signInAnonymously(auth);
     const db = firestoreApi.getFirestore(app);
     state.firebase = { db, ...firestoreApi };
 
@@ -40,9 +40,9 @@
       state.online=false;
       render();
     });
-  };
+  }
 
-  window.saveAccommodation = async function saveAccommodationCompat(form){
+  async function saveAccommodationCompat(form){
     const status=$('#suggest-status');
     if(!form.reportValidity()) return;
     if(!state.firebase){status.textContent='Firebase ist noch nicht verbunden. Bitte erneut versuchen.';return;}
@@ -68,7 +68,7 @@
       const id=`ski-accommodation--${crypto.randomUUID()}`;
       await state.firebase.setDoc(state.firebase.doc(state.firebase.db,'ratings',id),{
         fincaId:`ski-accommodation:${encodePayload(payload)}`,
-        person:'Marcel',
+        person:state.selectedPerson,
         score:1,
         updatedAt:state.firebase.serverTimestamp()
       });
@@ -79,9 +79,9 @@
       console.error(error);
       status.textContent=`Speichern fehlgeschlagen: ${error.code||error.message||'Firebase-Fehler'}`;
     }
-  };
+  }
 
-  window.saveRating = async function saveRatingCompat(accommodationId,score){
+  async function saveRatingCompat(accommodationId,score){
     if(!state.firebase) return;
     const id=`ski-rating--${slug(accommodationId)}--${slug(state.selectedPerson)}`;
     try{
@@ -95,5 +95,28 @@
       console.error(error);
       alert(`Bewertung fehlgeschlagen: ${error.code||error.message}`);
     }
-  };
+  }
+
+  document.addEventListener('submit', event => {
+    if(event.target && event.target.id === 'suggest-form'){
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      saveAccommodationCompat(event.target);
+    }
+  }, true);
+
+  document.addEventListener('click', event => {
+    const score = event.target.closest && event.target.closest('[data-score]');
+    if(score){
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      saveRatingCompat(score.dataset.accommodation, score.dataset.score);
+    }
+  }, true);
+
+  connectFirebaseCompat().catch(error => {
+    console.error(error);
+    const status=$('#suggest-status');
+    if(status) status.textContent=`Firebase-Verbindung fehlgeschlagen: ${error.code||error.message||'Fehler'}`;
+  });
 })();
