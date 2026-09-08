@@ -11,14 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .ski-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.ski-form-grid label{display:flex;flex-direction:column;gap:7px;font-size:.84rem;font-weight:600}.ski-form-grid input,.ski-form-grid select,.ski-form-grid textarea{font:inherit;border:1px solid rgba(35,72,59,.22);border-radius:12px;padding:12px 13px;background:#fff;color:#1d2a25}.ski-form-grid textarea{min-height:90px;resize:vertical}.ski-form-grid .span-2{grid-column:1/-1}.ski-form-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ski-form-checks label{flex-direction:row;align-items:center;font-weight:500;border:1px solid rgba(35,72,59,.12);padding:11px;border-radius:11px}.save-accommodation{width:100%;border:0;border-radius:13px;padding:14px 18px;background:#23483b;color:#fff;font:inherit;font-weight:700;cursor:pointer}.form-status{min-height:1.4em;font-size:.88rem;margin:10px 0 0}.ski-empty{padding:34px 20px;text-align:center;border:1px dashed rgba(35,72,59,.25);border-radius:18px}.ski-empty strong{display:block;font-size:1.15rem;margin-bottom:6px}.ski-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.ski-meta span{background:rgba(35,72,59,.07);padding:6px 9px;border-radius:999px;font-size:.8rem}.ski-note{margin:10px 0 0;color:#5c6863}.ski-rating-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px}.ski-rating-head select{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid rgba(35,72,59,.2)}.score-buttons{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:9px}.score-buttons button{min-width:0;padding:8px 0;border-radius:8px;border:1px solid rgba(35,72,59,.18);background:#fff;cursor:pointer}.score-buttons button.is-selected{background:#23483b;color:#fff}.sync-line{font-size:.76rem;color:#65716c;margin:7px 0 0}.accommodation-actions{display:flex;gap:10px;align-items:center;margin-top:15px}.accommodation-actions a{font-size:.88rem}.delete-accommodation{margin-left:auto;border:0;background:transparent;color:#9b3c32;cursor:pointer;font:inherit;font-size:.82rem}.spotlight[hidden]{display:none!important}.hero__top .suggest-link{position:fixed;top:18px;right:24px;z-index:1000;box-shadow:0 8px 24px rgba(35,72,59,.16)}body{padding-bottom:0!important}@media(max-width:700px){.ski-form-grid{grid-template-columns:1fr}.ski-form-grid .span-2{grid-column:auto}.ski-form-checks{grid-template-columns:1fr}.score-buttons{grid-template-columns:repeat(5,1fr)}.hero__top .suggest-link{top:12px;right:12px;padding:10px 12px;font-size:.82rem}}
+    .ski-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.ski-form-grid label{display:flex;flex-direction:column;gap:7px;font-size:.84rem;font-weight:600}.ski-form-grid input,.ski-form-grid select,.ski-form-grid textarea{font:inherit;border:1px solid rgba(35,72,59,.22);border-radius:12px;padding:12px 13px;background:#fff;color:#1d2a25}.ski-form-grid textarea{min-height:90px;resize:vertical}.ski-form-grid .span-2{grid-column:1/-1}.ski-form-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ski-form-checks label{flex-direction:row;align-items:center;font-weight:500;border:1px solid rgba(35,72,59,.12);padding:11px;border-radius:11px}.save-accommodation{width:100%;border:0;border-radius:13px;padding:14px 18px;background:#23483b;color:#fff;font:inherit;font-weight:700;cursor:pointer}.form-status{min-height:1.4em;font-size:.88rem;margin:10px 0 0}.ski-empty{padding:34px 20px;text-align:center;border:1px dashed rgba(35,72,59,.25);border-radius:18px}.ski-empty strong{display:block;font-size:1.15rem;margin-bottom:6px}.ski-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.ski-meta span{background:rgba(35,72,59,.07);padding:6px 9px;border-radius:999px;font-size:.8rem}.ski-note{margin:10px 0 0;color:#5c6863}.ski-rating-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px}.ski-rating-head select{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid rgba(35,72,59,.2)}.score-buttons{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin-top:9px}.score-buttons button{min-width:0;padding:8px 0;border-radius:8px;border:1px solid rgba(35,72,59,.18);background:#fff;cursor:pointer}.score-buttons button.is-selected{background:#23483b;color:#fff}.sync-line{font-size:.76rem;color:#65716c;margin:7px 0 0}.accommodation-actions{display:flex;gap:10px;align-items:center;margin-top:15px}.accommodation-actions a{font-size:.88rem}.delete-accommodation{margin-left:auto;border:0;background:transparent;color:#9b3c32;cursor:pointer;font:inherit;font-size:.82rem}.spotlight[hidden]{display:none!important}.hero__top .top-actions{position:fixed;top:18px;right:24px;z-index:1000;display:flex;gap:10px;align-items:center}.hero__top .suggest-link{position:static;box-shadow:0 8px 24px rgba(35,72,59,.16)}.global-user-select{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.95);box-shadow:0 8px 24px rgba(35,72,59,.14);font-size:.82rem;color:#23483b;font-weight:700}.global-user-select select{font:inherit;border:0;background:transparent;color:#23483b;font-weight:700;outline:none;cursor:pointer}body{padding-bottom:0!important}@media(max-width:700px){.ski-form-grid{grid-template-columns:1fr}.ski-form-grid .span-2{grid-column:auto}.ski-form-checks{grid-template-columns:1fr}.score-buttons{grid-template-columns:repeat(5,1fr)}.hero__top .top-actions{top:10px;right:10px;left:10px;justify-content:flex-end;gap:6px}.global-user-select{padding:7px 8px;font-size:.76rem}.hero__top .suggest-link{padding:10px 11px;font-size:.78rem}}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero__top">
       <div class="brand-mark" aria-hidden="true">S</div>
-      <button class="suggest-link" data-action="open-suggest">＋ Unterkunft hinzufügen</button>
+      <div class="top-actions">
+        <label class="global-user-select">Du bist:
+          <select data-person-select aria-label="User auswählen">
+            <option value="" selected disabled>User auswählen</option>
+            <option>User 1</option><option>User 2</option><option>User 3</option><option>User 4</option><option>User 5</option><option>User 6</option><option>User 7</option><option>User 8</option><option>User 9</option>
+          </select>
+        </label>
+        <button class="suggest-link" data-action="open-suggest">＋ Unterkunft hinzufügen</button>
+      </div>
     </div>
     <p class="eyebrow">Unser Skiurlaub</p>
     <h1>Ski <em>Check</em></h1>
@@ -70,5 +78,17 @@
 
   <script src="app.js" defer></script>
   <script src="ski-firebase-compat.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ski-selected-person') || '';
+      const topSelect = document.querySelector('.global-user-select [data-person-select]');
+      if (topSelect && saved) topSelect.value = saved;
+      document.addEventListener('change', event => {
+        if (!event.target.matches('[data-person-select]')) return;
+        const selected = event.target.value;
+        setTimeout(() => document.querySelectorAll('[data-person-select]').forEach(select => { select.value = selected; }), 0);
+      });
+    });
+  </script>
 </body>
 </html>
