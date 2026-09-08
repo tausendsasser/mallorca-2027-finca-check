@@ -35,10 +35,21 @@
       state.ratings=ratings;
       state.online=true;
       render();
+      updateDeleteButtons();
     }, error => {
       console.error(error);
       state.online=false;
       render();
+    });
+  }
+
+  function updateDeleteButtons(){
+    document.querySelectorAll('[data-delete]').forEach(button => {
+      const accommodation=state.accommodations.find(item => item.id===button.dataset.delete);
+      const isOwner=accommodation && accommodation.createdBy===state.selectedPerson;
+      button.hidden=!isOwner;
+      button.disabled=!isOwner;
+      button.title=isOwner ? 'Diese Unterkunft löschen' : 'Nur der eintragende User kann löschen';
     });
   }
 
@@ -97,6 +108,24 @@
     }
   }
 
+  async function deleteAccommodationCompat(id){
+    if(!state.firebase) return;
+    const accommodation=state.accommodations.find(item=>item.id===id);
+    if(!accommodation || accommodation.createdBy!==state.selectedPerson){
+      alert('Nur der User, der diese Unterkunft eingetragen hat, kann sie löschen.');
+      return;
+    }
+    if(!confirm('Diese Unterkunft wirklich löschen?')) return;
+    try{
+      await state.firebase.deleteDoc(state.firebase.doc(state.firebase.db,'ratings',id));
+      const related=state.ratings.filter(rating=>rating.accommodationId===id);
+      await Promise.all(related.map(rating=>state.firebase.deleteDoc(state.firebase.doc(state.firebase.db,'ratings',rating.id))));
+    }catch(error){
+      console.error(error);
+      alert(`Löschen fehlgeschlagen: ${error.code||error.message||'Firebase-Fehler'}`);
+    }
+  }
+
   document.addEventListener('submit', event => {
     if(event.target && event.target.id === 'suggest-form'){
       event.preventDefault();
@@ -111,8 +140,21 @@
       event.preventDefault();
       event.stopImmediatePropagation();
       saveRatingCompat(score.dataset.accommodation, score.dataset.score);
+      return;
+    }
+    const remove = event.target.closest && event.target.closest('[data-delete]');
+    if(remove){
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      deleteAccommodationCompat(remove.dataset.delete);
     }
   }, true);
+
+  document.addEventListener('change', event => {
+    if(event.target && event.target.matches('[data-person-select]')){
+      setTimeout(updateDeleteButtons,0);
+    }
+  });
 
   connectFirebaseCompat().catch(error => {
     console.error(error);
