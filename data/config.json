@@ -1,98 +1,35 @@
 {
-  "schemaVersion": 1,
-  "lastUpdated": "2026-08-21",
+  "schemaVersion": 2,
+  "lastUpdated": "2026-09-08",
   "trip": {
-    "title": "Mallorca 2027 – Finca Check",
-    "windowStart": "2027-07-24",
-    "windowEnd": "2027-08-15",
-    "idealStart": "2027-07-28",
-    "idealEnd": "2027-08-11",
-    "nights": 14,
-    "adults": 4,
-    "children": 2,
-    "preferredRegions": [
-      "Nordost",
-      "Nord",
-      "Nord / Nordwest"
-    ]
+    "title": "Skiurlaub – Unterkunfts-Check",
+    "subtitle": "Gemeinsam die beste Unterkunft für unseren Skiurlaub finden",
+    "datesLabel": "Reisedaten noch offen"
   },
   "familyMembers": [
-    "Marcel",
-    "Alina",
-    "Opi",
-    "Oma",
-    "Milia",
-    "Malea"
+    "User 1",
+    "User 2",
+    "User 3",
+    "User 4",
+    "User 5",
+    "User 6",
+    "User 7",
+    "User 8",
+    "User 9"
   ],
   "ratingRules": {
     "scaleMin": 1,
-    "scaleMax": 10,
-    "mustCriteriaScoreCap": 5
+    "scaleMax": 10
   },
   "ratingCriteria": [
-    {
-      "id": "sleeping",
-      "label": "Schlafsituation",
-      "weight": 0.2,
-      "required": true,
-      "minimum": 5
-    },
-    {
-      "id": "privacy",
-      "label": "Ruhe & Alleinlage",
-      "weight": 0.15,
-      "required": true,
-      "minimum": 5
-    },
-    {
-      "id": "socialPool",
-      "label": "Terrasse → Pool / Geselligkeit",
-      "weight": 0.15,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "pool",
-      "label": "Pool",
-      "weight": 0.15,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "region",
-      "label": "Region / Insellage",
-      "weight": 0.1,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "outdoor",
-      "label": "Außenbereich / Atmosphäre",
-      "weight": 0.1,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "climate",
-      "label": "Klimakomfort",
-      "weight": 0.05,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "value",
-      "label": "Preis-Leistung",
-      "weight": 0.05,
-      "required": false,
-      "minimum": null
-    },
-    {
-      "id": "gutFeeling",
-      "label": "Bauchgefühl",
-      "weight": 0.05,
-      "required": false,
-      "minimum": null
-    }
+    {"id":"location","label":"Lage / Skigebiet","weight":0.15},
+    {"id":"lift","label":"Entfernung zum Lift","weight":0.20},
+    {"id":"accommodation","label":"Unterkunft & Zimmer","weight":0.15},
+    {"id":"wellness","label":"Sauna / Wellness","weight":0.10},
+    {"id":"food","label":"Frühstück / Verpflegung","weight":0.10},
+    {"id":"parking","label":"Parken / Anreise","weight":0.05},
+    {"id":"price","label":"Preis-Leistung","weight":0.15},
+    {"id":"atmosphere","label":"Atmosphäre","weight":0.05},
+    {"id":"gutFeeling","label":"Bauchgefühl","weight":0.05}
   ]
 }
-
