@@ -1,5 +1,9 @@
 /* Compatibility layer: keep Firestore writes within the original ratings schema. */
 (function(){
+  /* app.js still contains the old Firestore reader. Disable it for this Ski build;
+     this compatibility layer is the single source of truth for Firebase data. */
+  try { window.connectFirebase = async function(){}; } catch(error) { console.warn(error); }
+
   const encodePayload = value => btoa(unescape(encodeURIComponent(JSON.stringify(value))));
   const decodePayload = value => JSON.parse(decodeURIComponent(escape(atob(value))));
   const slug = value => String(value).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -31,11 +35,18 @@
           ratings.push({id:documentSnapshot.id,accommodationId:data.fincaId.slice('ski-rating:'.length),person:data.person,score:data.score});
         }
       });
-      state.accommodations=accommodations;
-      state.ratings=ratings;
-      state.online=true;
-      render();
-      updateDeleteButtons();
+
+      const applySnapshot = () => {
+        state.accommodations=accommodations;
+        state.ratings=ratings;
+        state.online=true;
+        render();
+        updateDeleteButtons();
+      };
+      applySnapshot();
+      /* If an already-started legacy listener races on first load, restore the
+         correct compatibility snapshot immediately afterwards. */
+      setTimeout(applySnapshot,150);
     }, error => {
       console.error(error);
       state.online=false;
@@ -56,6 +67,10 @@
   async function saveAccommodationCompat(form){
     const status=$('#suggest-status');
     if(!form.reportValidity()) return;
+    if(!state.selectedPerson){
+      status.textContent='Bitte zuerst deinen User auswählen.';
+      return;
+    }
     if(!state.firebase){status.textContent='Firebase ist noch nicht verbunden. Bitte erneut versuchen.';return;}
     const value=id=>$(id).value.trim();
     const numberOrNull=id=>value(id)===''?null:Number(value(id));
@@ -93,6 +108,7 @@
   }
 
   async function saveRatingCompat(accommodationId,score){
+    if(!state.selectedPerson){ alert('Bitte zuerst deinen User auswählen.'); return; }
     if(!state.firebase) return;
     const id=`ski-rating--${slug(accommodationId)}--${slug(state.selectedPerson)}`;
     try{
