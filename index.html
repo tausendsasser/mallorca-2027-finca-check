@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#23483b">
-  <meta name="description" content="Familienvergleich für unsere Mallorca-Fincas 2027">
-  <title>Mallorca 2027 – Finca Check</title>
+  <meta name="description" content="Gemeinsamer Unterkunftsvergleich für unseren Skiurlaub">
+  <title>Skiurlaub – Unterkunfts-Check</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
 <body>
   <header class="hero">
     <div class="hero__top">
-      <div class="brand-mark" aria-hidden="true">M</div>
-      <button class="suggest-link" data-action="open-suggest">＋ Finca vorschlagen</button>
+      <div class="brand-mark" aria-hidden="true">S</div>
+      <button class="suggest-link" data-action="open-suggest">＋ Unterkunft vorschlagen</button>
     </div>
-    <p class="eyebrow">Unser Familienurlaub</p>
-    <h1>Mallorca <em>2027</em></h1>
-    <p class="hero__intro">Gemeinsam den Ort finden, an den wir noch lange zurückdenken.</p>
+    <p class="eyebrow">Unser Skiurlaub</p>
+    <h1>Ski <em>Check</em></h1>
+    <p class="hero__intro">Gemeinsam die Unterkunft finden, die für alle am besten passt.</p>
     <div class="trip-facts" id="trip-facts" aria-label="Reisedaten"></div>
   </header>
 
@@ -28,15 +28,13 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Unsere Auswahl</p>
-          <h2>Welche fühlt sich richtig an?</h2>
+          <h2>Welche Unterkunft gewinnt?</h2>
         </div>
         <button class="filter-toggle" data-action="toggle-filters" aria-expanded="false">Sortieren</button>
       </div>
 
       <div class="filters sort-panel" id="filters" hidden>
-        <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="newest">Zuletzt hinzugefügt</option><option value="price">Preis</option><option value="pool">Poolgröße</option><option value="name">Name</option></select></label>
-        <select id="status-filter" hidden aria-hidden="true"><option value="active" selected>Aktiv</option></select>
-        <select id="region-filter" hidden aria-hidden="true"><option value="all" selected>Alle Regionen</option></select>
+        <label>Sortieren<select id="sort-select"><option value="score">Gesamtscore</option><option value="price">Preis</option><option value="lift">Liftentfernung</option><option value="name">Name</option></select></label>
       </div>
 
       <div class="spotlight" id="spotlight" hidden></div>
@@ -53,35 +51,23 @@
 
   <nav class="bottom-nav" aria-label="Hauptnavigation">
     <button class="is-active" data-scroll="overview-view"><span>⌂</span>Übersicht</button>
-    <button data-scroll="finca-grid"><span>◇</span>Fincas</button>
+    <button data-scroll="finca-grid"><span>◇</span>Unterkünfte</button>
     <button data-scroll="compare-view"><span>⇄</span>Vergleich</button>
     <button data-action="open-suggest"><span>＋</span>Vorschlagen</button>
   </nav>
 
-  <dialog class="detail-dialog" id="detail-dialog"><article id="detail-content"></article></dialog>
-
   <dialog class="suggest-dialog" id="suggest-dialog">
     <form class="suggest-card" id="suggest-form" novalidate>
       <button class="dialog-close" type="button" data-close-suggest aria-label="Schließen">×</button>
-      <p class="eyebrow">Neue Entdeckung</p><h2>Finca vorschlagen</h2>
-      <p>Du hast eine interessante Finca gefunden? Schick uns einfach den Link.</p>
+      <p class="eyebrow">Neue Entdeckung</p><h2>Unterkunft vorschlagen</h2>
+      <p>Du hast ein interessantes Hotel, Apartment oder Ferienhaus gefunden? Schick einfach den Link.</p>
       <label for="suggest-url">Link zur Unterkunft</label><input id="suggest-url" type="url" placeholder="https://…" required>
       <p class="form-error" id="suggest-error" aria-live="polite"></p>
       <div class="share-actions"><button type="button" data-share="whatsapp">WhatsApp</button><button type="button" data-share="email">E-Mail</button><button type="button" data-share="copy">Link kopieren</button></div>
       <button class="cancel-button" type="button" data-close-suggest>Abbrechen</button>
-      <p class="privacy-note">Der Link wird nur über die von dir gewählte App geteilt und nicht auf dieser Website gespeichert.</p>
     </form>
   </dialog>
 
-  <dialog class="lightbox" id="lightbox">
-    <button class="dialog-close" data-close-lightbox aria-label="Bild schließen">×</button><button class="gallery-arrow gallery-arrow--left" data-lightbox-step="-1" aria-label="Vorheriges Bild">‹</button><img id="lightbox-image" alt="Vergrößerte Finca-Ansicht"><button class="gallery-arrow gallery-arrow--right" data-lightbox-step="1" aria-label="Nächstes Bild">›</button><span class="lightbox-count" id="lightbox-count"></span>
-  </dialog>
-
-  <template id="loading-template"><div class="loading"><span></span><p>Unsere Fincas werden vorbereitet …</p></div></template>
   <script src="app.js" defer></script>
-  <script src="enhancements.js" defer></script>
-  <script src="climate-ui.js" defer></script>
-  <script src="ranking-ui.js" defer></script>
-  <script src="video-ui.js" defer></script>
 </body>
 </html>
