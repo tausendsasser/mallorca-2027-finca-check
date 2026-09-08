@@ -68,7 +68,7 @@
       const id=`ski-accommodation--${crypto.randomUUID()}`;
       await state.firebase.setDoc(state.firebase.doc(state.firebase.db,'ratings',id),{
         fincaId:`ski-accommodation:${encodePayload(payload)}`,
-        person:'ski-system',
+        person:'Marcel',
         score:1,
         updatedAt:state.firebase.serverTimestamp()
       });
